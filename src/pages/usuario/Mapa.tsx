@@ -99,6 +99,8 @@ export default function Mapa() {
   const l = useL()
   const t = useT()
   const eventos = useStore((s) => s.eventos)
+  const catItems = useStore((s) => s.categorias)
+  const catsActivas = CATEGORIAS.filter((c) => catItems.find((x) => x.id === c)?.activa !== false)
   const radio = useRadio((s) => s.radio)
   const mapRef = React.useRef<L.Map | null>(null)
   const clusterRef = React.useRef<L.MarkerClusterGroup | null>(null)
@@ -277,7 +279,7 @@ export default function Mapa() {
             </button>
           </div>
           <div className="pointer-events-auto flex gap-1.5 overflow-x-auto scrollbar-none">
-            {CATEGORIAS.map((c) => (
+            {catsActivas.map((c) => (
               <button
                 key={c}
                 onClick={() => toggleCat(c)}

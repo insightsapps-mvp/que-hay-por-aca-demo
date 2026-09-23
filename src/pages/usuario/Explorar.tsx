@@ -35,6 +35,8 @@ export default function Explorar() {
   const navigate = useNavigate()
   const [params, setParams] = useSearchParams()
   const eventos = useStore((s) => s.eventos)
+  const catItems = useStore((s) => s.categorias)
+  const catsActivas = CATEGORIAS.filter((c) => catItems.find((x) => x.id === c)?.activa !== false)
   const [q, setQ] = React.useState('')
   const [cats, setCats] = React.useState<Categoria[]>([])
   const radio = useRadio((s) => s.radio)
@@ -173,7 +175,7 @@ export default function Explorar() {
           </div>
 
           <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 scrollbar-none">
-            {CATEGORIAS.map((c) => {
+            {catsActivas.map((c) => {
               const on = cats.includes(c)
               return (
                 <button

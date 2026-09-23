@@ -89,3 +89,5 @@
 .mv-sheet-left { animation: mv-sheet-l .28s cubic-bezier(.2,.8,.2,1) both; }
 .mv-sheet-right { animation: mv-sheet-r .28s cubic-bezier(.2,.8,.2,1) both; }
 .mv-sheet-bottom { animation: mv-sheet-b .28s cubic-bezier(.2,.8,.2,1) both; }
+
+.mv-map-sheet .leaflet-bottom { bottom: 130px; }

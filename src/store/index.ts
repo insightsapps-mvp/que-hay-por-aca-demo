@@ -26,6 +26,7 @@ import {
   VALIDACIONES_INICIALES,
   genCodigo,
   localById,
+  usuarioNombre,
 } from '@/data/mock'
 
 export const DEFAULT_VIEW: Record<Role, string> = {
@@ -288,14 +289,23 @@ export const useStore = create<State>((set, get) => {
       const nombres = ['Tomás Iglesias', 'Valentina Sosa', 'Julián Pereyra', 'Camila Benítez', 'Nicolás Aguirre', 'Sofía Romero']
       const codigo = codigoManual?.toUpperCase() || genCodigo(Math.random)
       const offline = get().offline
+      const found = codigoManual ? get().tickets.find((t) => t.codigo === codigo) : undefined
       let res: ScanResult
       if (tipo === 'valida') {
-        res = { tipo, comprador: nombres[scanSeq % nombres.length], cantidad: (scanSeq % 3) + 1, codigo, hora: now }
+        res = {
+          tipo,
+          comprador: found ? usuarioNombre(found.usuarioId) : nombres[scanSeq % nombres.length],
+          cantidad: found?.cantidad ?? (scanSeq % 3) + 1,
+          codigo,
+          hora: now,
+        }
       } else if (tipo === 'usada') {
         const prev = new Date(now)
         prev.setHours(23, 14, 0, 0)
         if (prev > now) prev.setDate(prev.getDate() - 1)
-        res = { tipo, comprador: 'Julián Pereyra', cantidad: 2, codigo: 'QHAP4K8RZE', hora: now, ingresoPrevio: prev }
+        res = found
+          ? { tipo, comprador: usuarioNombre(found.usuarioId), cantidad: found.cantidad, codigo, hora: now, ingresoPrevio: found.usadoEn ?? prev }
+          : { tipo, comprador: 'Julián Pereyra', cantidad: 2, codigo: 'QHAP4K8RZE', hora: now, ingresoPrevio: prev }
       } else {
         res = { tipo, codigo, hora: now }
       }

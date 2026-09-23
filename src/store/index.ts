@@ -44,7 +44,7 @@ export const ROLE_PERSONA: Record<Role, { nombre: string; sub: string; iniciales
   usuario: { nombre: 'Martina Gómez', sub: 'martina.gomez@gmail.com', iniciales: 'MG' },
   organizador: { nombre: 'Lucas Ferreyra', sub: 'Nocturna Producciones', iniciales: 'LF' },
   local: { nombre: 'Carla Ruiz', sub: 'Club Vórtice · Palermo', iniciales: 'CR' },
-  admin: { nombre: 'Sebastian', sub: 'Admin · Movida', iniciales: 'S' },
+  admin: { nombre: 'Sebastian', sub: 'Admin · Que hay por acá', iniciales: 'S' },
 }
 export const MY_ORG = 'org-01'
 export const MY_LOCAL = 'loc-01'
@@ -295,7 +295,7 @@ export const useStore = create<State>((set, get) => {
         const prev = new Date(now)
         prev.setHours(23, 14, 0, 0)
         if (prev > now) prev.setDate(prev.getDate() - 1)
-        res = { tipo, comprador: 'Julián Pereyra', cantidad: 2, codigo: 'MVDP4K8RZE', hora: now, ingresoPrevio: prev }
+        res = { tipo, comprador: 'Julián Pereyra', cantidad: 2, codigo: 'QHAP4K8RZE', hora: now, ingresoPrevio: prev }
       } else {
         res = { tipo, codigo, hora: now }
       }

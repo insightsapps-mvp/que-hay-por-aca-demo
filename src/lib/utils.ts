@@ -5,8 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export const BRAND = 'Que hay por acá'
+
 export const WHATSAPP_URL =
-  'https://wa.me/5491139375146?text=Vi%20el%20demo%20de%20Movida%2C%20quiero%20que%20avancemos!'
+  'https://wa.me/5491139375146?text=Vi%20el%20demo%20de%20Que%20hay%20por%20ac%C3%A1%2C%20quiero%20que%20avancemos!'
 
 export function openWhatsApp() {
   window.open(WHATSAPP_URL, '_blank', 'noopener')

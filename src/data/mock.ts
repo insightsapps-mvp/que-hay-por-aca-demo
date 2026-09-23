@@ -69,7 +69,7 @@ const pick = <T,>(arr: T[]) => arr[Math.floor(rnd() * arr.length)]
 const int = (a: number, b: number) => a + Math.floor(rnd() * (b - a + 1))
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 export function genCodigo(r: () => number = rnd) {
-  let s = 'MVD'
+  let s = 'QHA'
   for (let i = 0; i < 7; i++) s += CODE_CHARS[Math.floor(r() * CODE_CHARS.length)]
   return s
 }
@@ -358,12 +358,12 @@ function addCompra(evId: string, userId: string, cant: number, fecha: Date, meto
 }
 
 // Entradas de Martina (usuario demo)
-addCompra('ev-02', ME_ID, 2, hoyMas(-3, 18, 12), 'billetera', 'valida', 'MVD7K2Q9XA')
-addCompra('ev-15', ME_ID, 1, hoyMas(-1, 11, 40), 'tarjeta', 'valida', 'MVD4H8TR2C')
-addCompra('ev-22', ME_ID, 2, hoyMas(-2, 20, 5), 'transferencia', 'valida', 'MVDQ3N7WPE')
-addCompra('ev-27', ME_ID, 2, hoyMas(-8, 16, 30), 'tarjeta', 'usada', 'MVDZ5B9LMK')
-addCompra('ev-31', ME_ID, 1, hoyMas(-12, 21, 10), 'billetera', 'usada', 'MVD2F6YHJS')
-addCompra('ev-35', ME_ID, 1, hoyMas(-15, 10, 10), 'tarjeta', 'vencida', 'MVDR8C4VNT')
+addCompra('ev-02', ME_ID, 2, hoyMas(-3, 18, 12), 'billetera', 'valida', 'QHA7K2Q9XA')
+addCompra('ev-15', ME_ID, 1, hoyMas(-1, 11, 40), 'tarjeta', 'valida', 'QHA4H8TR2C')
+addCompra('ev-22', ME_ID, 2, hoyMas(-2, 20, 5), 'transferencia', 'valida', 'QHAQ3N7WPE')
+addCompra('ev-27', ME_ID, 2, hoyMas(-8, 16, 30), 'tarjeta', 'usada', 'QHAZ5B9LMK')
+addCompra('ev-31', ME_ID, 1, hoyMas(-12, 21, 10), 'billetera', 'usada', 'QHA2F6YHJS')
+addCompra('ev-35', ME_ID, 1, hoyMas(-15, 10, 10), 'tarjeta', 'vencida', 'QHAR8C4VNT')
 
 // Resto (~175)
 const publicos = EVENTOS_INICIALES.filter((e) => e.estado === 'publicado' || e.estado === 'finalizado')

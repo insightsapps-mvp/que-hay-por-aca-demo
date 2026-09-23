@@ -2,7 +2,7 @@ import * as React from 'react'
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { ArrowLeft, ChevronRight, LogOut, Menu, Moon, Sparkles, Sun, UserRound } from 'lucide-react'
 import { toast } from 'sonner'
-import { cn, WHATSAPP_URL } from '@/lib/utils'
+import { BRAND, cn, WHATSAPP_URL } from '@/lib/utils'
 import { tk, tl, useL, useSettings, useT } from '@/i18n'
 import type { Role } from '@/types'
 import { DEFAULT_VIEW, ROLE_COLOR, ROLE_PERSONA, useStore } from '@/store'
@@ -199,7 +199,7 @@ function Sidebar() {
     <aside className="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col self-start border-r border-border bg-surface lg:flex">
       <div className="flex h-14 shrink-0 items-center gap-2 border-b border-border px-5">
         <Logo />
-        <span className="text-[15px] font-extrabold tracking-tight">MOVIDA</span>
+        <span className="text-[15px] font-extrabold tracking-tight">{BRAND}</span>
         <span className="ml-auto rounded-full bg-accent-soft px-1.5 py-0.5 text-[9px] font-bold text-accent">DEMO</span>
       </div>
       <SidebarBody />
@@ -227,7 +227,7 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
         <Logo size="h-6 w-6" />
       </div>
       <nav className="hidden min-w-0 items-center gap-1.5 text-sm sm:flex" aria-label="Breadcrumb">
-        <span className="text-muted">Movida</span>
+        <span className="text-muted">{BRAND}</span>
         <ChevronRight className="h-3.5 w-3.5 text-muted" />
         <span className="text-muted">{t(group)}</span>
         <ChevronRight className="h-3.5 w-3.5 text-muted" />
@@ -357,7 +357,7 @@ export function AppShell() {
           <SheetTitle className="sr-only">{l('Menú', 'Menu')}</SheetTitle>
           <div className="flex h-14 shrink-0 items-center gap-2 border-b border-border px-5">
             <Logo />
-            <span className="text-[15px] font-extrabold tracking-tight">MOVIDA</span>
+            <span className="text-[15px] font-extrabold tracking-tight">{BRAND}</span>
           </div>
           <div className="flex min-h-0 flex-1 flex-col">
             <SidebarBody onNavigate={() => setOpen(false)} />

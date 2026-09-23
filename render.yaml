@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: movida-demo
+    name: que-hay-por-aca-demo
     runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist

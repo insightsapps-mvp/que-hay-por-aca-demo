@@ -79,7 +79,7 @@
   .print-full { padding: 0 !important; max-width: 100% !important; }
 }
 
-@keyframes mv-in { from { opacity: 0; scale: .95; translate: 0 6px } to { opacity: 1; scale: 1; translate: 0 0 } }
+@keyframes mv-in { from { opacity: 0; scale: .95 } to { opacity: 1; scale: 1 } }
 @keyframes mv-fade { from { opacity: 0 } to { opacity: 1 } }
 @keyframes mv-sheet-l { from { translate: -100% 0 } to { translate: 0 0 } }
 @keyframes mv-sheet-r { from { translate: 100% 0 } to { translate: 0 0 } }

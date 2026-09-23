@@ -7,9 +7,11 @@
 - Bloque 4: login dos columnas + Welcome Modal (centrado medido 0px a 1440x900) + renombre de marca a "Que hay por acá"
 - Bloque 5: Explorar (búsqueda, categorías, filtros con radio 1–20 km + mini-mapa, toast zona oeste)
 - Bloque 6: Mapa de hoy (pines divIcon con halo, clusters, radio, popup, chips, zonas flyTo, hoja arrastrable)
+- Bloque 7: detalle de evento (reseñas + form), checkout (éxito/rechazo/reintento), Mis entradas, detalle con QR, mail de compra (Escritorio/Celular)
 - Bloque 4: login dos columnas + welcome modal (QA centrado Regla A: 0px en 1440x900, 1920x854, 375x812)
 - Bloque 5: Explorar (búsqueda, categorías, filtros con radio 1–20 km + mini-mapa, toast zona oeste)
 - Bloque 6: Mapa de hoy (pines divIcon con halo, clusters, radio, popup, chips, zonas flyTo, hoja arrastrable)
+- Bloque 7: detalle de evento (reseñas + form), checkout (éxito/rechazo/reintento), Mis entradas, detalle con QR, mail de compra (Escritorio/Celular)
 
 ## En curso
 - Bloque 5: explorar

@@ -3,12 +3,13 @@
 ## Completado
 - Bloque 1: setup Vite + TS + Tailwind + shadcn/ui (radix) + deps en dependencies, tokens §4, fuentes, anti-flash, i18n base, render.yaml
 - Bloque 2: tipos (src/types.ts), datos mock relativos a new Date() (src/data/mock.ts), store zustand (src/store)
+- Bloque 3: shell (sidebar sticky, topbar, role switcher, CTA WhatsApp, Sheet mobile, PreviewBanner, DevNotice, DeviceFrame iOS/Android, rutas + guard, botón Volver a la propuesta)
 
 ## En curso
-- Bloque 3: shell
+- Bloque 4: login + welcome
 
 ## Pendiente
-- Bloques 4–15
+- Bloques 5–15
 
 ## Decisiones
 - shadcn/ui escrito a mano sobre Radix (sin CLI) en src/components/ui

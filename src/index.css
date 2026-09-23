@@ -91,3 +91,5 @@
 .mv-sheet-bottom { animation: mv-sheet-b .28s cubic-bezier(.2,.8,.2,1) both; }
 
 .mv-map-sheet .leaflet-bottom { bottom: 130px; }
+
+@keyframes mv-progress { from { width: 0% } to { width: 100% } }

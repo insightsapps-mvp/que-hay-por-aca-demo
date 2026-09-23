@@ -333,7 +333,7 @@ export default function NuevoEvento() {
             <div className="mb-1.5 flex items-center justify-between">
               <label className="text-[12.5px] font-semibold">{l('Fotos', 'Photos')} <span className="num font-normal text-muted">{fotos.length}/5</span></label>
               {fotos.length === 0 && (
-                <button onClick={() => setFotos(fotosDe((categoria || 'fiestas') as Categoria, 1, 4))} className="inline-flex items-center gap-1 text-[12px] font-semibold text-accent">
+                <button data-trailer="btn-fotos-ejemplo" onClick={() => setFotos(fotosDe((categoria || 'fiestas') as Categoria, 1, 4))} className="inline-flex items-center gap-1 text-[12px] font-semibold text-accent">
                   <Sparkles className="h-3.5 w-3.5" />
                   {l('Usar fotos de ejemplo', 'Use sample photos')}
                 </button>

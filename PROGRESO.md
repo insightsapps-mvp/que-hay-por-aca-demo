@@ -13,6 +13,7 @@
 - Bloque 10: Admin — dashboard (KPIs, GMV, categorías, tops, mapa por zona, alertas), aprobación (checklist, aprobar/rechazar), transacciones (timeline, devolución, CSV), usuarios y roles (solicitudes, matriz de permisos), categorías, notificaciones
 - Bloque 11: Propuesta — encabezado, circuito (paso 3 destacado), 10 módulos con "Ver en el demo" (cambio de rol + retorno señalizado + resaltado 4s), cómo trabajamos + garantía, inversión oculta (montos fuera del DOM, reveal animado), cierre. QA §7.8: rol correcto, retorno centrado (desvío 2px), F5 oculto
 - Bloque 12: Tour manual (solo botón ✨ Tour), pasos en orden del sidebar por rol, máscara SVG con agujero + glow + dot azul, tooltip auto-posicionado, modal final. QA Regla A: desvío 0px en 1440×900, 1920×854 y 375×812 (welcome, tooltip sin target, modal final)
+- Bloque 13: Modo Trailer — 12 escenas en loop (~86s), cursor virtual con easing + click real, anillo con doble box-shadow, captions de vidrio + barra de progreso, z 9990–9994, gatea tour y botón de retorno, salida con X/Esc → /login
 - Bloque 4: login dos columnas + welcome modal (QA centrado Regla A: 0px en 1440x900, 1920x854, 375x812)
 - Bloque 5: Explorar (búsqueda, categorías, filtros con radio 1–20 km + mini-mapa, toast zona oeste)
 - Bloque 6: Mapa de hoy (pines divIcon con halo, clusters, radio, popup, chips, zonas flyTo, hoja arrastrable)
@@ -22,6 +23,7 @@
 - Bloque 10: Admin — dashboard (KPIs, GMV, categorías, tops, mapa por zona, alertas), aprobación (checklist, aprobar/rechazar), transacciones (timeline, devolución, CSV), usuarios y roles (solicitudes, matriz de permisos), categorías, notificaciones
 - Bloque 11: Propuesta — encabezado, circuito (paso 3 destacado), 10 módulos con "Ver en el demo" (cambio de rol + retorno señalizado + resaltado 4s), cómo trabajamos + garantía, inversión oculta (montos fuera del DOM, reveal animado), cierre. QA §7.8: rol correcto, retorno centrado (desvío 2px), F5 oculto
 - Bloque 12: Tour manual (solo botón ✨ Tour), pasos en orden del sidebar por rol, máscara SVG con agujero + glow + dot azul, tooltip auto-posicionado, modal final. QA Regla A: desvío 0px en 1440×900, 1920×854 y 375×812 (welcome, tooltip sin target, modal final)
+- Bloque 13: Modo Trailer — 12 escenas en loop (~86s), cursor virtual con easing + click real, anillo con doble box-shadow, captions de vidrio + barra de progreso, z 9990–9994, gatea tour y botón de retorno, salida con X/Esc → /login
 
 ## En curso
 - Bloque 5: explorar

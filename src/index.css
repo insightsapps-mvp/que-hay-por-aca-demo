@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #fafafa;
+  --border: #e4e4e7;
+  --text: #09090b;
+  --muted: #71717a;
+  --accent: #7c3aed;
+  --accent-fg: #ffffff;
+  --accent-soft: #ede9fe;
+  --accent-ring: rgba(124, 58, 237, 0.35);
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --info: #2563eb;
+  color-scheme: light;
+}
+.dark {
+  --bg: #09090b;
+  --surface: #131316;
+  --surface-2: #18181b;
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(139, 92, 246, 0.14);
+  --accent-ring: rgba(139, 92, 246, 0.4);
+  color-scheme: dark;
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html, body { background: var(--bg); color: var(--text); }
+  body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; font-variant-numeric: tabular-nums; }
+}
+
+@layer components {
+  .card { @apply rounded-[12px] border border-border bg-surface shadow-card; }
+  .kicker { @apply text-[10.5px] font-semibold uppercase tracking-wider text-muted; }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
+
+/* Leaflet */
+.leaflet-container { font-family: Inter, sans-serif; background: var(--surface-2); }
+.leaflet-div-icon { background: transparent !important; border: 0 !important; }
+.leaflet-popup-content-wrapper { border-radius: 12px; background: var(--surface); color: var(--text); box-shadow: 0 8px 30px rgba(0,0,0,.18); padding: 0; overflow: hidden; }
+.leaflet-popup-content { margin: 0; width: 230px !important; }
+.leaflet-popup-tip { background: var(--surface); }
+.leaflet-container a.leaflet-popup-close-button { color: #fff; top: 4px; right: 4px; }
+.dark .leaflet-control-attribution { background: rgba(19,19,22,.8) !important; color: #a1a1aa; }
+.dark .leaflet-control-attribution a { color: #c4b5fd; }
+.leaflet-control-attribution { font-size: 9px !important; }
+.dark .leaflet-bar a { background: #18181b; color: #f4f4f5; border-color: rgba(255,255,255,.08); }
+
+.mv-pin { position: relative; width: 36px; height: 36px; }
+.mv-pin .core { position: absolute; inset: 0; border-radius: 9999px; background: var(--accent); border: 2.5px solid #fff; box-shadow: 0 4px 12px rgba(124,58,237,.45); display: grid; place-items: center; color: #fff; z-index: 2; transition: scale .2s; }
+.mv-pin:hover .core { scale: 1.12; }
+.mv-pin .halo { position: absolute; inset: 0; border-radius: 9999px; background: var(--accent); animation: pulsering 1.6s ease-out infinite; z-index: 1; }
+.mv-pin.sel .core { background: #09090b; }
+.dark .mv-pin.sel .core { background: #fff; color: #7c3aed; }
+.mv-cluster { width: 40px; height: 40px; border-radius: 9999px; background: #fff; border: 2.5px solid var(--accent); display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; color: var(--accent); box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.dark .mv-cluster { background: #131316; }
+.mv-me { position: relative; width: 20px; height: 20px; }
+.mv-me .dot { position: absolute; inset: 3px; border-radius: 9999px; background: #2563eb; border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.3); z-index: 2; }
+.mv-me .ring { position: absolute; inset: -6px; border-radius: 9999px; background: rgba(37,99,235,.35); animation: pulsering 2s ease-out infinite; }
+
+@keyframes pulsering { 0% { transform: scale(1); opacity: .6 } 100% { transform: scale(1.8); opacity: 0 } }
+
+@media print {
+  aside, header, .no-print, [data-sonner-toaster] { display: none !important; }
+  html, body, main { background: #fff !important; color: #000 !important; }
+  .print-full { padding: 0 !important; max-width: 100% !important; }
+}
+
+@keyframes mv-in { from { opacity: 0; scale: .95; translate: 0 6px } to { opacity: 1; scale: 1; translate: 0 0 } }
+@keyframes mv-fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes mv-sheet-l { from { translate: -100% 0 } to { translate: 0 0 } }
+@keyframes mv-sheet-r { from { translate: 100% 0 } to { translate: 0 0 } }
+@keyframes mv-sheet-b { from { translate: 0 100% } to { translate: 0 0 } }
+.mv-anim-in { animation: mv-in .3s cubic-bezier(.2,.8,.2,1) both; }
+.mv-anim-fade { animation: mv-fade .2s ease-out both; }
+.mv-sheet-left { animation: mv-sheet-l .28s cubic-bezier(.2,.8,.2,1) both; }
+.mv-sheet-right { animation: mv-sheet-r .28s cubic-bezier(.2,.8,.2,1) both; }
+.mv-sheet-bottom { animation: mv-sheet-b .28s cubic-bezier(.2,.8,.2,1) both; }

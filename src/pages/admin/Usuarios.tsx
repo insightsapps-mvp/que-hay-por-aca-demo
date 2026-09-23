@@ -92,7 +92,7 @@ export default function Usuarios() {
       </Tabs>
 
       {tab === 'usuarios' ? (
-        <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
           <div className="card">
             <div className="flex flex-wrap gap-2 p-4">
               <div className="relative w-full sm:w-64">
@@ -181,7 +181,7 @@ export default function Usuarios() {
           </div>
         </div>
       ) : (
-        <div className="mt-4 grid gap-3 lg:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-3 lg:grid-cols-2">
           {solicitudes.map((s) => (
             <div key={s.id} className="card p-5">
               <div className="flex items-start justify-between gap-2">

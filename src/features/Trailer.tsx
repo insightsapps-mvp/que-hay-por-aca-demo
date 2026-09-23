@@ -230,8 +230,8 @@ export function Trailer() {
 
       {/* Cursor virtual azul */}
       <div
-        className="absolute z-[9993] transition-[left,top] duration-[900ms] ease-[cubic-bezier(.65,0,.35,1)]"
-        style={{ left: cursor.x, top: cursor.y }}
+        className="absolute z-[9993]"
+        style={{ left: cursor.x, top: cursor.y, transition: 'left 900ms cubic-bezier(.65,0,.35,1), top 900ms cubic-bezier(.65,0,.35,1)' }}
       >
         <span key={ripple} className="absolute -left-4 -top-4 h-8 w-8 rounded-full bg-blue-500/40" style={{ animation: ripple ? 'pulsering .7s ease-out' : undefined }} />
         <MousePointer2 className="h-7 w-7 -translate-x-1 -translate-y-1 fill-blue-500 text-white drop-shadow-lg" />

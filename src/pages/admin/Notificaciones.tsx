@@ -34,7 +34,7 @@ export default function Notificaciones() {
         ['Push de recordatorio antes del evento y avisos de cambios.', 'Reminder push before the event and change notices.'],
       ]}
     >
-      <div className="grid gap-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <DevNotice
           funcion={['Envío por mail (SendGrid)', 'Email delivery (SendGrid)']}
           hoy={['Hoy el log y los estados son de ejemplo.', 'Today the log and statuses are sample data.']}
@@ -54,7 +54,7 @@ export default function Notificaciones() {
         <Kpi label={l('Rebotados', 'Bounced')} value={rebotados} icon={MailX} />
       </div>
 
-      <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+      <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div className="card">
           <div className="flex items-center justify-between p-5 pb-3">
             <p className="text-[15px] font-semibold">{l('Log de mails enviados', 'Sent email log')}</p>

@@ -64,7 +64,7 @@ export default function Aprobacion() {
     const sinFoto = !ev.fotos.length
     return (
       <div key={ev.id} className={cn('card overflow-hidden', sinFoto && pendiente && 'border-amber-400')}>
-        <div className="grid gap-0 md:grid-cols-[280px_minmax(0,1fr)]">
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-[280px_minmax(0,1fr)]">
           <div className="relative">
             {sinFoto ? (
               <div className="grid h-full min-h-[180px] place-items-center bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400">
@@ -104,7 +104,7 @@ export default function Aprobacion() {
             </div>
             {pendiente && (
               <>
-                <div className="mt-3 grid gap-1.5 sm:grid-cols-2">
+                <div className="mt-3 grid grid-cols-1 gap-1.5 sm:grid-cols-2">
                   {checks.map((c, i) => (
                     <span
                       key={i}

@@ -109,7 +109,7 @@ export default function Dashboard() {
       </div>
 
       {alertas.length > 0 && (
-        <div className="mt-4 grid gap-2 lg:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 gap-2 lg:grid-cols-3">
           {alertas.map((a, i) => (
             <button key={i} onClick={() => navigate(a.to)} className="card flex items-center gap-3 p-3 text-left transition-shadow hover:shadow-md">
               <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-[10px] ${tone[a.tone]}`}>
@@ -124,7 +124,7 @@ export default function Dashboard() {
         </div>
       )}
 
-      <div className="mt-4 grid gap-4 xl:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-3">
         <div className="card p-5 xl:col-span-2">
           <p className="text-[15px] font-semibold">{l('GMV últimos 30 días', 'GMV last 30 days')}</p>
           <p className="text-xs text-muted">{l('Ventas brutas de entradas (ARS)', 'Gross ticket sales (ARS)')}</p>
@@ -162,7 +162,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="card p-5">
           <p className="text-[15px] font-semibold">{l('Top 5 eventos', 'Top 5 events')}</p>
           <div className="mt-3 space-y-2.5">

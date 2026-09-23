@@ -149,13 +149,13 @@ export function DevicePage({
   dark?: boolean
 }) {
   return (
-    <div className="mx-auto grid max-w-[1180px] gap-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-start">
+    <div className="mx-auto grid grid-cols-1 max-w-[1180px] gap-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-start">
       <div className="min-w-0 xl:sticky xl:top-20">
         <ViewHeader role={role} title={title} subtitle={subtitle} />
         <PreviewBanner id={bannerId} bullets={bullets} />
         {side && <div className="hidden space-y-3 xl:block">{side}</div>}
       </div>
-      <div className="-mx-4 lg:mx-0">
+      <div className="-mx-4 min-w-0 lg:mx-0">
         <DeviceFrame tabBar={tabBar} dark={dark}>
           {children}
         </DeviceFrame>

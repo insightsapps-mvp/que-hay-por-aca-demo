@@ -98,7 +98,7 @@ export default function Validaciones() {
                 <TableCell>
                   <Badge variant={v.resultado === 'valida' ? 'green' : v.resultado === 'usada' ? 'amber' : 'red'}>{t(`val.${v.resultado}` as TKey)}</Badge>
                 </TableCell>
-                <TableCell className="text-muted">{v.dispositivo}</TableCell>
+                <TableCell className="text-muted">{lang === 'en' ? v.dispositivo.replace('Puerta', 'Door') : v.dispositivo}</TableCell>
               </TableRow>
             ))}
           </TableBody>

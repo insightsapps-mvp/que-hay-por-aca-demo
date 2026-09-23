@@ -188,7 +188,7 @@ function Inversion() {
               <p className="num text-[44px] font-bold leading-none tracking-tight sm:text-[56px]">{usd(6000)}</p>
               <p className="mt-2 text-sm text-muted">{l('Proyecto completo · pago único de plataforma', 'Complete project · one-time platform payment')}</p>
             </div>
-            <div className="mt-6 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-1.5 sm:grid-cols-2">
               {MODULOS.map((m) => (
                 <div key={m.n} className="flex items-center gap-2 text-[13px]">
                   <Check className="h-3.5 w-3.5 shrink-0 text-accent" />
@@ -204,7 +204,7 @@ function Inversion() {
                 <span className="text-xs font-semibold text-success">{l('Incluido', 'Included')}</span>
               </div>
             </div>
-            <div className="mt-6 grid gap-3 md:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
               <div className="rounded-[12px] border border-border p-4">
                 <p className="kicker">{l('Condiciones de pago', 'Payment terms')}</p>
                 <div className="mt-3 space-y-3">
@@ -281,7 +281,7 @@ export default function Propuesta() {
       <section className="mt-10" data-trailer="propuesta-circuito">
         <p className="kicker">{l('El circuito', 'The loop')}</p>
         <h2 className="mt-1 text-[22px] font-bold tracking-tight">{l('De la carga del evento a la puerta', 'From event upload to the door')}</h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
           {CIRCUITO.map((c, i) => (
             <div key={i} className={cn('card relative flex flex-col p-4', c.wow && 'border-accent bg-accent-soft ring-1 ring-accent/30')}>
               {c.wow && (
@@ -310,7 +310,7 @@ export default function Propuesta() {
           </div>
           <span className="num shrink-0 text-[15px] text-muted">{l('10 módulos', '10 modules')}</span>
         </div>
-        <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {MODULOS.map((m) => {
             const hi = destacado === m.n
             return (
@@ -358,7 +358,7 @@ export default function Propuesta() {
       {/* 7.4 Cómo trabajamos */}
       <section className="mt-12">
         <p className="kicker">{l('Cómo trabajamos', 'How we work')}</p>
-        <div className="mt-3 grid gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
+        <div className="mt-3 grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
           <div className="card p-5 sm:p-6">
             <div className="flex items-baseline justify-between gap-2">
               <h2 className="text-[20px] font-bold tracking-tight">{l('4 hitos', '4 milestones')}</h2>
@@ -367,7 +367,7 @@ export default function Propuesta() {
             <p className="mt-1 text-xs text-muted">{l('Etapa 00 · Onboarding + relevamiento: mapeo de flujo, migración de datos y arquitectura.', 'Stage 00 · Onboarding + discovery: flow mapping, data migration and architecture.')}</p>
             <div className="relative mt-6">
               <div className="absolute left-[18px] right-[18px] top-[18px] hidden h-0.5 bg-gradient-to-r from-accent via-accent/60 to-accent/20 md:block" />
-              <div className="grid gap-4 md:grid-cols-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
                 {HITOS.map((h, i) => (
                   <div key={i} className="relative flex gap-3 md:flex-col md:items-start">
                     <span className="relative z-10 grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 border-accent bg-surface text-accent">

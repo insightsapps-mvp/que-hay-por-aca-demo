@@ -52,7 +52,7 @@ export default function Categorias() {
         <Input value={nuevoEn} onChange={(e) => setNuevoEn(e.target.value)} placeholder={l('Nombre (inglés)', 'Name (English)')} className="h-9" onKeyDown={(e) => e.key === 'Enter' && agregar()} />
         <Button onClick={agregar} className="shrink-0"><Plus /> {l('Crear categoría', 'Create category')}</Button>
       </div>
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
         {categorias.map((c) => {
           const n = eventos.filter((e) => e.categoria === c.id).length
           return (

@@ -130,7 +130,7 @@ export default function Metricas() {
         <Kpi label={l('Rating promedio', 'Avg. rating')} value={fmtNum(ratingProm || 0, lang, 1)} sub="★" icon={Star} className="col-span-2 lg:col-span-1" />
       </div>
 
-      <div className="mt-4 grid gap-4 xl:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-3">
         <div className="card p-5 xl:col-span-2">
           <div className="flex items-center justify-between">
             <div>

@@ -212,7 +212,7 @@ export function PreviewBanner({ id, bullets }: { id: string; bullets: [string, s
       {!closed && (
         <div className="mt-2.5">
           <p className="text-[13px] font-semibold">{l('Qué hace este módulo cuando esté funcional', 'What this module does once it’s live')}</p>
-          <ul className="mt-1.5 grid gap-1 text-[13px] text-muted sm:grid-cols-3 sm:gap-3">
+          <ul className="mt-1.5 grid grid-cols-1 gap-1 text-[13px] text-muted sm:grid-cols-3 sm:gap-3">
             {bullets.map((b, i) => (
               <li key={i} className="flex gap-1.5">
                 <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />

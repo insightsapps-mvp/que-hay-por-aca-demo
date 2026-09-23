@@ -62,7 +62,7 @@ export default function Resenas() {
         ['Tu respuesta le llega al usuario por push y queda pública.', 'Your reply reaches the user via push and stays public.'],
       ]}
     >
-      <div className="grid gap-4 lg:grid-cols-[320px_minmax(0,1fr)]">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[320px_minmax(0,1fr)]">
         <div className="space-y-4">
           <div className="card p-5">
             <p className="kicker">{l('Promedio general', 'Overall average')}</p>

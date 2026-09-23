@@ -433,7 +433,7 @@ for (let i = 0; i < 44; i++) {
   const evId = evConResenas[i % evConResenas.length]
   const r = rnd()
   const est = r < 0.5 ? 5 : r < 0.8 ? 4 : r < 0.93 ? 3 : r < 0.98 ? 2 : 1
-  const estrellas = est === 2 ? 3 : est // el único 2★ es el edge case de abajo
+  const estrellas = est <= 2 ? 3 : est // la única reseña ≤2★ es el edge case de abajo
   const ev = evById(evId)
   const base = ev.inicio < NOW ? ev.inicio : hoyMas(-20, 12)
   resArr.push({

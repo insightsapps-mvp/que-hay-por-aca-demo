@@ -11,6 +11,7 @@
 - Bloque 8: Organizador — Mis eventos (tabs, editar/duplicar/cancelar), Cargar evento (validación, fotos reales + ejemplo, mapa, stepper), Métricas (KPIs, gráficos, CSV real), Reseñas (responder, 2★ destacada)
 - Bloque 9: Local — escáner con visor animado, válida/usada/inválida, código manual real, modo offline + sincronizar; Validaciones (KPIs, densidad horaria, log)
 - Bloque 10: Admin — dashboard (KPIs, GMV, categorías, tops, mapa por zona, alertas), aprobación (checklist, aprobar/rechazar), transacciones (timeline, devolución, CSV), usuarios y roles (solicitudes, matriz de permisos), categorías, notificaciones
+- Bloque 11: Propuesta — encabezado, circuito (paso 3 destacado), 10 módulos con "Ver en el demo" (cambio de rol + retorno señalizado + resaltado 4s), cómo trabajamos + garantía, inversión oculta (montos fuera del DOM, reveal animado), cierre. QA §7.8: rol correcto, retorno centrado (desvío 2px), F5 oculto
 - Bloque 4: login dos columnas + welcome modal (QA centrado Regla A: 0px en 1440x900, 1920x854, 375x812)
 - Bloque 5: Explorar (búsqueda, categorías, filtros con radio 1–20 km + mini-mapa, toast zona oeste)
 - Bloque 6: Mapa de hoy (pines divIcon con halo, clusters, radio, popup, chips, zonas flyTo, hoja arrastrable)
@@ -18,6 +19,7 @@
 - Bloque 8: Organizador — Mis eventos (tabs, editar/duplicar/cancelar), Cargar evento (validación, fotos reales + ejemplo, mapa, stepper), Métricas (KPIs, gráficos, CSV real), Reseñas (responder, 2★ destacada)
 - Bloque 9: Local — escáner con visor animado, válida/usada/inválida, código manual real, modo offline + sincronizar; Validaciones (KPIs, densidad horaria, log)
 - Bloque 10: Admin — dashboard (KPIs, GMV, categorías, tops, mapa por zona, alertas), aprobación (checklist, aprobar/rechazar), transacciones (timeline, devolución, CSV), usuarios y roles (solicitudes, matriz de permisos), categorías, notificaciones
+- Bloque 11: Propuesta — encabezado, circuito (paso 3 destacado), 10 módulos con "Ver en el demo" (cambio de rol + retorno señalizado + resaltado 4s), cómo trabajamos + garantía, inversión oculta (montos fuera del DOM, reveal animado), cierre. QA §7.8: rol correcto, retorno centrado (desvío 2px), F5 oculto
 
 ## En curso
 - Bloque 5: explorar

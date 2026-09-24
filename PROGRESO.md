@@ -31,7 +31,8 @@
 - i18n: diccionario {clave:[es,en]} + helper useL('es','en')
 - 36 eventos públicos (14 hoy / 12 semana / 10 pasados) + 4 en gestión (2 pendientes, 1 borrador, 1 cancelado)
 - "Hoy" = eventos en curso o que empiezan antes del próximo 06:00
-- Marca "Que hay por acá" (pedido del cliente). Emails demo @quehayporaca.app, códigos QR con prefijo QHA. Claves de storage internas siguen como movida_*
+- Marca "Que hay por acá" (con tilde, pedido del cliente). Emails demo @quehayporaca.app, códigos QR con prefijo QHA. Claves de storage internas siguen como movida_*
+- Inversión: USD 6.500 total · 50% anticipo (USD 3.250) + 50% a 30 días (USD 3.250) · pago único con 15% off: USD 5.525 (ahorro USD 975)
 - Tiles: CARTO light_all/dark_all ahora exige API key → Esri Canvas Light/Dark Gray (sin key, mismo look). Se cambia en src/components/MapBase.tsx
 - Entrada de modales con opacity + scale solamente (centro fijo durante la animación)
 

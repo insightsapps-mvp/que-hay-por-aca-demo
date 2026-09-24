@@ -185,7 +185,7 @@ function Inversion() {
         {mounted && (
           <div className="pt-6">
             <div className="border-t border-border pt-6">
-              <p className="num text-[44px] font-bold leading-none tracking-tight sm:text-[56px]">{usd(6000)}</p>
+              <p className="num text-[44px] font-bold leading-none tracking-tight sm:text-[56px]">{usd(6500)}</p>
               <p className="mt-2 text-sm text-muted">{l('Proyecto completo · pago único de plataforma', 'Complete project · one-time platform payment')}</p>
             </div>
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-1.5 sm:grid-cols-2">
@@ -213,24 +213,24 @@ function Inversion() {
                       <p className="text-sm font-semibold">{l('50% al firmar', '50% on signing')}</p>
                       <p className="text-xs text-muted">{l('Arrancamos el onboarding y relevamiento.', 'We kick off onboarding and discovery.')}</p>
                     </div>
-                    <span className="num text-[18px]">{usd(3000)}</span>
+                    <span className="num text-[18px]">{usd(3250)}</span>
                   </div>
                   <div className="flex items-start justify-between gap-3 border-t border-border pt-3">
                     <div>
                       <p className="text-sm font-semibold">{l('50% a 30 días', '50% at 30 days')}</p>
                       <p className="text-xs text-muted">{l('Entrega final: plataforma completa, probada y en producción.', 'Final delivery: complete platform, tested and in production.')}</p>
                     </div>
-                    <span className="num text-[18px]">{usd(3000)}</span>
+                    <span className="num text-[18px]">{usd(3250)}</span>
                   </div>
                 </div>
               </div>
               <div className="rounded-[12px] border-2 border-accent bg-accent-soft p-4">
                 <p className="text-sm font-semibold text-accent">{l('Pagando el 100% por adelantado: 15% de descuento', 'Paying 100% upfront: 15% discount')}</p>
                 <div className="mt-3 flex flex-wrap items-baseline gap-3">
-                  <span className="num text-[18px] text-muted line-through">{usd(6000)}</span>
-                  <span className="num text-[36px] font-bold leading-none">{usd(5100)}</span>
+                  <span className="num text-[18px] text-muted line-through">{usd(6500)}</span>
+                  <span className="num text-[36px] font-bold leading-none">{usd(5525)}</span>
                 </div>
-                <p className="mt-2 inline-flex rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-white">{l(`Ahorrás ${usd(900)}`, `You save ${usd(900)}`)}</p>
+                <p className="mt-2 inline-flex rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-white">{l(`Ahorrás ${usd(975)}`, `You save ${usd(975)}`)}</p>
               </div>
             </div>
           </div>

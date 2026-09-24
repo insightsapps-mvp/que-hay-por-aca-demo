@@ -67,88 +67,25 @@ export default function Login() {
     }, 450)
   }
 
-  const features = [
-    { icon: MapPin, t: l('Mapa de eventos de hoy', 'Tonight’s event map') },
-    { icon: CreditCard, t: l('Pagos integrados', 'Integrated payments') },
-    { icon: QrCode, t: l('Validación en la puerta', 'Door validation') },
-    { icon: BarChart3, t: l('Métricas en tiempo real', 'Real-time metrics') },
-  ]
 
   return (
-    <div className="flex min-h-screen w-full bg-bg">
-      {/* HERO */}
-      <section className="relative hidden w-[55%] overflow-hidden border-r border-border bg-surface-2 lg:flex lg:flex-col lg:justify-between lg:p-12 xl:p-16">
-        <div className="pointer-events-none absolute -left-24 -top-24 h-96 w-96 rounded-full bg-accent/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 right-0 h-[28rem] w-[28rem] rounded-full bg-fuchsia-400/15 blur-3xl" />
-        <div className="relative flex items-center gap-3">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 shadow-card">
-            <Logo size="h-6 w-6" />
-            <span className="text-[14px] font-extrabold tracking-tight">{BRAND}</span>
-          </span>
-          <DemoPill />
-        </div>
-        <div className="relative max-w-xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-[44px] font-extrabold leading-[1.05] tracking-tight xl:text-[54px]"
-          >
-            {l('Toda la noche de Buenos Aires.', 'All of Buenos Aires’ nightlife.')}
-            <br />
-            <span className="text-accent">{l('En una sola app.', 'In one single app.')}</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="mt-5 max-w-md text-[17px] leading-relaxed text-muted"
-          >
-            {l('Encontrá eventos cerca tuyo, comprá con Mercado Pago y entrá con tu QR.', 'Find events near you, pay with Mercado Pago and get in with your QR.')}
-          </motion.p>
-          <ul className="mt-9 grid grid-cols-2 gap-3">
-            {features.map((f, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 + i * 0.12, duration: 0.4 }}
-                className="flex items-center gap-3 rounded-[12px] border border-border bg-surface/80 p-3 shadow-card backdrop-blur"
-              >
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[10px] bg-accent-soft text-accent">
-                  <f.icon className="h-[18px] w-[18px]" />
-                </span>
-                <span className="text-[14px] font-semibold">{f.t}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-        <div className="relative flex items-center justify-between text-xs text-muted">
-          <span>CABA · {l('Zona oeste', 'West zone')} · iOS + Android</span>
-          <PoweredBy />
-        </div>
-      </section>
-
-      {/* CARD */}
-      <section className="relative flex w-full flex-col lg:w-[45%]">
-        <div className="flex items-center justify-between gap-2 p-4 sm:p-6">
-          <div className="flex items-center gap-2 lg:invisible">
-            <Logo size="h-7 w-7" />
-            <span className="text-[15px] font-extrabold tracking-tight">{BRAND}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <LangToggle />
-            <ThemeToggle />
-          </div>
-        </div>
-        <div className="flex flex-1 items-center justify-center px-4 pb-8 sm:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="w-full max-w-[420px]"
-          >
-            <div className="mb-4 flex justify-center lg:hidden">
+    <div className="relative flex min-h-screen w-full flex-col overflow-hidden">
+      <div className="pointer-events-none absolute -left-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-orange-400/25 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-24 h-[30rem] w-[30rem] rounded-full bg-blue-500/15 blur-3xl" />
+      <div className="relative flex items-center justify-end gap-2 p-4 sm:p-6">
+        <LangToggle />
+        <ThemeToggle />
+      </div>
+      <div className="relative flex flex-1 items-center justify-center px-4 pb-10 sm:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+          className="w-full max-w-[420px]"
+        >
+            <div className="mb-6 flex flex-col items-center gap-3 text-center">
+              <Logo size="h-12 w-12" />
+              <p className="text-[24px] font-extrabold tracking-tight">{BRAND}</p>
               <DemoPill />
             </div>
             <div className="card p-6 sm:p-8">
@@ -261,10 +198,9 @@ export default function Login() {
             <p className="mt-4 text-center text-xs text-muted">
               {l('Contraseña de todos los roles:', 'Password for every role:')} <span className="num text-text">demo123</span>
             </p>
-            <PoweredBy className="mt-2 text-center lg:hidden" />
+            <PoweredBy className="mt-2 text-center" />
           </motion.div>
-        </div>
-      </section>
+      </div>
     </div>
   )
 }

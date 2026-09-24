@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { CircleMarker, Marker } from 'react-leaflet'
 import L from 'leaflet'
 import { ArrowLeft, BadgeCheck, CalendarDays, Clock, Heart, MapPin, Minus, Plus, Share2, Star, Users } from 'lucide-react'
@@ -45,6 +45,12 @@ export default function Evento() {
   const [stars, setStars] = React.useState(0)
   const [hover, setHover] = React.useState(0)
   const [texto, setTexto] = React.useState('')
+  const [params] = useSearchParams()
+  React.useEffect(() => {
+    if (params.get('resena') !== '1') return
+    const id = setTimeout(() => document.getElementById('form-resena')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 400)
+    return () => clearTimeout(id)
+  }, [params])
 
   if (!ev) {
     return (
@@ -55,13 +61,14 @@ export default function Evento() {
   }
   const loc = localById(ev.localId)
   const org = orgById(ev.organizadorId)
-  const propias = resenas.filter((r) => r.eventoId === ev.id)
+  const todasDelEvento = resenas.filter((r) => r.eventoId === ev.id)
+  const propias = todasDelEvento.filter((r) => !r.oculta) // el admin decide cuáles se muestran
   const ultimas = propias.slice(0, 5)
   const dist = distribucion(ev.rating || 4.5, ev.cantResenas || propias.length)
   const maxDist = Math.max(...dist, 1)
   const pasado = ev.fin < new Date()
   const miTicket = tickets.find((tk) => tk.eventoId === ev.id && tk.usuarioId === ME_ID)
-  const yaResene = propias.some((r) => r.usuarioId === ME_ID)
+  const yaResene = todasDelEvento.some((r) => r.usuarioId === ME_ID)
   const agotado = ev.vendidas >= ev.aforo
   const puedeComprar = !pasado && !agotado && ev.estado === 'publicado'
 
@@ -133,7 +140,7 @@ export default function Evento() {
         <div className="px-4 pb-28 pt-4">
           <h2 className="text-[22px] font-bold leading-tight tracking-tight">{ev.titulo[lang]}</h2>
           <div className="mt-2 flex items-center gap-2">
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-[#db2777] text-[10px] font-bold text-white">
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-[#0891b2] text-[10px] font-bold text-white">
               {org.nombre.split(' ').map((w) => w[0]).slice(0, 2).join('')}
             </span>
             <span className="text-[13px] font-medium">{org.nombre}</span>
@@ -231,7 +238,7 @@ export default function Evento() {
           )}
 
           {pasado && miTicket && !yaResene && (
-            <div className="mt-3 rounded-[12px] border border-accent/40 bg-accent-soft/50 p-3">
+            <div id="form-resena" className="mt-3 rounded-[12px] border-2 border-amber-300 bg-amber-50/60 p-3 dark:border-amber-500/30 dark:bg-amber-500/10">
               <p className="text-[13.5px] font-semibold">{l('¿Cómo estuvo? Dejá tu reseña', 'How was it? Leave a review')}</p>
               <div className="mt-2 flex gap-1" onMouseLeave={() => setHover(0)}>
                 {[1, 2, 3, 4, 5].map((s) => (

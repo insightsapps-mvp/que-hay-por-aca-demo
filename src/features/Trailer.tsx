@@ -49,13 +49,13 @@ const SCENES: TrailerScene[] = [
   {
     view: '/app/mapa', role: 'usuario', duration: 7000,
     actions: [{ selector: '.mv-map-sheet' }],
-    chapter: ['04 · Mapa de hoy ★', '04 · Tonight’s map ★'], title: ['Lo que pasa esta noche', 'What’s on tonight'],
+    chapter: ['04 · Mapa de hoy ★', '04 · Today’s map ★'], title: ['Lo que pasa hoy, a toda hora', 'What’s on today, any time'],
     body: ['Solo eventos de hoy. Los que ya arrancaron laten en el mapa.', 'Only today’s events. The ones already running pulse on the map.'],
   },
   {
     duration: 7000,
     actions: [{ selector: '[data-trailer="mapa-pin-destacado"]', click: true }],
-    chapter: ['05 · Mapa de hoy ★', '05 · Tonight’s map ★'], title: ['Del pin a la compra', 'From pin to purchase'],
+    chapter: ['05 · Mapa de hoy ★', '05 · Today’s map ★'], title: ['Del pin a la compra', 'From pin to purchase'],
     body: ['Un toque en el pin: foto, hora, precio y botón de compra.', 'One tap on the pin: photo, time, price and a buy button.'],
   },
   {
@@ -223,7 +223,7 @@ export function Trailer() {
             top: ring.y - 6,
             width: ring.w + 12,
             height: ring.h + 12,
-            boxShadow: '0 0 0 3px #7c3aed, 0 0 0 9px rgba(124,58,237,.28)',
+            boxShadow: '0 0 0 3px #ef6412, 0 0 0 9px rgba(239,100,18,.28)',
           }}
         />
       )}

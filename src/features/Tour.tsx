@@ -31,7 +31,7 @@ export function getTourSteps(role: Role, lang: Lang): Step[] {
   const solic = s.solicitudes.filter((x) => x.estado === 'pendiente').length
 
   const welcome: Record<Role, [string, string, string, string]> = {
-    usuario: ['La app del Usuario', 'The User app', 'Así ve Martina la app: eventos cerca, el mapa de esta noche, compra con Mercado Pago y su QR.', 'This is how Martina sees the app: nearby events, tonight’s map, Mercado Pago checkout and her QR.'],
+    usuario: ['La app del Usuario', 'The User app', 'Así ve Martina la app: eventos cerca, el mapa de eventos de hoy, compra con Mercado Pago y su QR.', 'This is how Martina sees the app: nearby events, today’s event map, Mercado Pago checkout and her QR.'],
     organizador: ['El panel del Organizador', 'The Organizer panel', 'Así trabaja Nocturna Producciones: carga eventos, sigue sus ventas y responde reseñas.', 'This is how Nocturna Producciones works: uploads events, tracks sales and replies to reviews.'],
     local: ['La puerta del Local', 'The Venue door', 'Así opera Club Vórtice: escanea los QR en la puerta y ve quién entró y cuándo.', 'This is how Club Vórtice operates: scans QRs at the door and sees who got in and when.'],
     admin: ['La Administración', 'Administration', 'Así ves vos toda la plataforma: aprobaciones, pagos, usuarios y categorías.', 'This is how you see the whole platform: approvals, payments, users and categories.'],
@@ -39,7 +39,7 @@ export function getTourSteps(role: Role, lang: Lang): Step[] {
   const items: Record<string, [string, string]> = {
     propuesta: ['Acá está todo lo que incluye tu desarrollo, módulo por módulo. Desde cada tarjeta saltás a verlo funcionando.', 'Here’s everything your build includes, module by module. From each card you can jump to see it working.'],
     explorar: ['Buscador, 5 categorías y radio de 1 a 20 km. Subilo a 20 km y aparecen los 9 eventos de zona oeste.', 'Search, 5 categories and a 1–20 km radius. Raise it to 20 km and the 9 west-zone events show up.'],
-    mapa: [`${hoy.length} eventos esta noche, ${live} ya arrancaron. Tocá un pin para comprar.`, `${hoy.length} events tonight, ${live} already started. Tap a pin to buy.`],
+    mapa: [`${hoy.length} eventos hoy, ${live} ya arrancaron. Tocá un pin para comprar.`, `${hoy.length} events today, ${live} already started. Tap a pin to buy.`],
     entradas: [`Martina tiene ${proximas} entradas próximas con su QR, y el mail de compra a un toque.`, `Martina has ${proximas} upcoming tickets with their QR, and the purchase email one tap away.`],
     eventos: [`Los ${misEv} eventos de Nocturna con estado, vendidas e ingresos. Editá, duplicá o cancelá.`, `Nocturna’s ${misEv} events with status, sales and revenue. Edit, duplicate or cancel.`],
     nuevo: ['Formulario desde el celular: fotos, fecha, precio, entradas y ubicación. Se envía a aprobación.', 'Mobile form: photos, date, price, tickets and location. It’s sent for approval.'],
@@ -51,6 +51,7 @@ export function getTourSteps(role: Role, lang: Lang): Step[] {
     aprobacion: [`${pend} eventos en cola con checklist automático. Uno no tiene foto de portada.`, `${pend} events queued with an automatic checklist. One is missing its cover photo.`],
     transacciones: [`${s.transacciones.length} pagos con el timeline de Mercado Pago, devoluciones y CSV.`, `${s.transacciones.length} payments with the Mercado Pago timeline, refunds and CSV.`],
     usuarios: [`${s.usuarios.length} usuarios, ${solic} solicitudes de organizador/local y la matriz de permisos.`, `${s.usuarios.length} users, ${solic} organizer/venue requests and the permissions matrix.`],
+    moderacion: ['Todas las reseñas de la plataforma: elegí cuáles se muestran y ocultá spam u ofensivas con un toque.', 'Every review on the platform: choose which ones are shown and hide spam or offensive ones with one tap.'],
     categorias: ['Las 5 categorías de la app: creá, renombrá o apagá una y desaparece de los filtros.', 'The app’s 5 categories: create, rename or switch one off and it disappears from filters.'],
     notificaciones: ['Log de mails entregados, abiertos y rebotados, y la plantilla del mail con QR.', 'Log of delivered, opened and bounced emails, plus the QR email template.'],
   }

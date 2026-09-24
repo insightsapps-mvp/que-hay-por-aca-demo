@@ -19,7 +19,7 @@ export default {
         ring: 'var(--accent-ring)',
         text: 'var(--text)',
         muted: 'var(--muted)',
-        accent: { DEFAULT: 'var(--accent)', fg: 'var(--accent-fg)', soft: 'var(--accent-soft)', ring: 'var(--accent-ring)' },
+        accent: { DEFAULT: 'var(--accent)', 2: 'var(--accent-2)', fg: 'var(--accent-fg)', soft: 'var(--accent-soft)', ring: 'var(--accent-ring)' },
         success: 'var(--success)',
         danger: 'var(--danger)',
         warning: 'var(--warning)',

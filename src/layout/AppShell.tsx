@@ -164,7 +164,7 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
                   className={({ isActive }) =>
                     cn(
                       'group mb-0.5 flex items-center gap-2.5 rounded-[8px] px-2.5 py-[7px] text-[13.5px] font-medium transition-colors',
-                      isActive ? 'bg-accent text-white shadow-sm' : 'text-text hover:bg-surface-2'
+                      isActive ? 'bg-accent text-white shadow-md shadow-orange-500/25' : 'text-text hover:bg-surface-2'
                     )
                   }
                 >
@@ -196,7 +196,7 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
 
 function Sidebar() {
   return (
-    <aside className="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col self-start border-r border-border bg-surface lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-[264px] shrink-0 flex-col self-start border-r border-border bg-white/75 backdrop-blur-xl dark:bg-[#1d1512]/80 lg:flex">
       <div className="flex h-14 shrink-0 items-center gap-2 border-b border-border px-5">
         <Logo />
         <span className="text-[15px] font-extrabold tracking-tight">{BRAND}</span>
@@ -343,7 +343,7 @@ export function AppShell() {
     window.scrollTo({ top: 0 })
   }, [pathname])
   return (
-    <div className="flex min-h-screen w-full bg-bg">
+    <div className="flex min-h-screen w-full">
       <Sidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         <Topbar onMenu={() => setOpen(true)} />

@@ -36,10 +36,10 @@ export const DEFAULT_VIEW: Record<Role, string> = {
   admin: '/admin/dashboard',
 }
 export const ROLE_COLOR: Record<Role, string> = {
-  usuario: '#7c3aed',
-  organizador: '#db2777',
+  usuario: '#ef6412',
+  organizador: '#0891b2',
   local: '#059669',
-  admin: '#4f46e5',
+  admin: '#1d4ed8',
 }
 export const ROLE_PERSONA: Record<Role, { nombre: string; sub: string; iniciales: string }> = {
   usuario: { nombre: 'Martina Gómez', sub: 'martina.gomez@gmail.com', iniciales: 'MG' },
@@ -138,6 +138,7 @@ interface State {
   setOffline: (v: boolean) => void
   sincronizar: () => number
   responderResena: (id: string, texto: string) => void
+  toggleResena: (id: string) => void
   agregarResena: (eventoId: string, estrellas: number, texto: string) => void
   devolver: (txId: string) => void
   cambiarRolUsuario: (userId: string, rol: Role) => void
@@ -338,6 +339,7 @@ export const useStore = create<State>((set, get) => {
     },
     responderResena: (id, texto) =>
       set((s) => ({ resenas: s.resenas.map((r) => (r.id === id ? { ...r, respuesta: { es: texto, en: texto } } : r)) })),
+    toggleResena: (id) => set((s) => ({ resenas: s.resenas.map((r) => (r.id === id ? { ...r, oculta: !r.oculta } : r)) })),
     agregarResena: (eventoId, estrellas, texto) =>
       set((s) => ({
         resenas: [

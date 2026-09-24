@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { QRCodeSVG } from 'qrcode.react'
-import { Ticket as TicketIcon } from 'lucide-react'
+import { Star, Ticket as TicketIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useL, useSettings, useT, type TKey } from '@/i18n'
 import type { Evento, Ticket } from '@/types'
@@ -59,6 +59,7 @@ export default function Entradas() {
   const l = useL()
   const navigate = useNavigate()
   const tickets = useStore((s) => s.tickets)
+  const resenas = useStore((s) => s.resenas)
   const eventos = useStore((s) => s.eventos)
   const [tab, setTab] = React.useState<'proximas' | 'pasadas'>('proximas')
   const now = new Date()
@@ -98,7 +99,23 @@ export default function Entradas() {
           </div>
           <div className="mt-3 space-y-3">
             {lista.length ? (
-              lista.map(({ tk, ev }) => <TicketPass key={tk.id} tk={tk} ev={ev} onClick={() => navigate(`/app/entradas/${tk.id}`)} />)
+              lista.map(({ tk, ev }) => {
+                const puedeResenar = ev.fin < now && !resenas.some((r) => r.eventoId === ev.id && r.usuarioId === ME_ID)
+                return (
+                  <div key={tk.id}>
+                    <TicketPass tk={tk} ev={ev} onClick={() => navigate(`/app/entradas/${tk.id}`)} />
+                    {puedeResenar && (
+                      <button
+                        onClick={() => navigate(`/app/evento/${ev.id}?resena=1`)}
+                        className="mt-1.5 flex w-full items-center justify-center gap-1.5 rounded-[10px] border border-amber-300 bg-amber-50 py-2 text-[12.5px] font-semibold text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300"
+                      >
+                        <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                        {l('¿Cómo estuvo? Dejá tu reseña', 'How was it? Leave a review')}
+                      </button>
+                    )}
+                  </div>
+                )
+              })
             ) : (
               <Empty icon={TicketIcon} title={l('No tenés entradas acá', 'No tickets here')} body={l('Buscá un evento en el mapa y comprá tu entrada.', 'Find an event on the map and buy your ticket.')} />
             )}

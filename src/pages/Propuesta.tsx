@@ -98,16 +98,16 @@ const MODULOS: Modulo[] = [
   },
   {
     n: 8, icon: MapPin, role: 'usuario', view: '/app/mapa',
-    nombre: ['Mapa de eventos de hoy', 'Tonight’s event map'],
+    nombre: ['Mapa de eventos de hoy', 'Today’s event map'],
     desc: ['Todo lo que pasa hoy, en un mapa centrado en donde está el usuario.', 'Everything happening today, on a map centered on the user.'],
     bullets: [['Pines agrupados por zona', 'Pins clustered by zone'], ['Popup con foto, hora y precio', 'Popup with photo, time and price'], ['Solo eventos de hoy o en curso', 'Only today’s or live events'], ['Centrado en tu ubicación', 'Centered on your location']],
-    donde: ['Rol Usuario · Mapa de hoy ★', 'User role · Tonight’s map ★'],
+    donde: ['Rol Usuario · Mapa de hoy ★', 'User role · Today’s map ★'],
   },
   {
     n: 9, icon: Star, role: 'organizador', view: '/organizador/resenas',
     nombre: ['Reseñas y estrellas', 'Reviews and stars'],
-    desc: ['Solo reseña quien fue. El organizador responde y el promedio se calcula solo.', 'Only attendees can review. The organizer replies and the average updates itself.'],
-    bullets: [['Validación de compra', 'Purchase validation'], ['1 a 5 estrellas + texto', '1 to 5 stars + text'], ['Promedio automático (ej. 4,3)', 'Automatic average (e.g. 4.3)'], ['Respuesta del organizador', 'Organizer reply']],
+    desc: ['Los clientes que fueron dejan estrellas y comentario en cada evento o experiencia. El organizador responde y el admin modera.', 'Customers who attended leave stars and a comment on every event or experience. The organizer replies and the admin moderates.'],
+    bullets: [['Validación de compra', 'Purchase validation'], ['1 a 5 estrellas + texto', '1 to 5 stars + text'], ['Promedio automático (ej. 4,3)', 'Automatic average (e.g. 4.3)'], ['Respuesta del organizador', 'Organizer reply'], ['El admin elige qué reseñas se muestran', 'Admin chooses which reviews are shown']],
     donde: ['Rol Organizador · Reseñas', 'Organizer role · Reviews'],
   },
   {
@@ -122,7 +122,7 @@ const MODULOS: Modulo[] = [
 const CIRCUITO: { icon: LucideIcon; t: Bi; d: Bi; wow?: boolean }[] = [
   { icon: Upload, t: ['El organizador carga su evento', 'The organizer uploads the event'], d: ['Fotos, horario, precio y aforo desde la app.', 'Photos, time, price and capacity from the app.'] },
   { icon: ShieldCheck, t: ['Admin lo aprueba', 'Admin approves it'], d: ['Nada se publica sin revisión.', 'Nothing goes live without review.'] },
-  { icon: MapPin, t: ['El usuario lo encuentra cerca', 'Users find it nearby'], d: ['Mapa de hoy y búsqueda por distancia y categoría.', 'Tonight’s map and search by distance and category.'], wow: true },
+  { icon: MapPin, t: ['El usuario lo encuentra cerca', 'Users find it nearby'], d: ['Mapa de hoy y búsqueda por distancia y categoría.', 'Today’s map and search by distance and category.'], wow: true },
   { icon: CreditCard, t: ['Compra con Mercado Pago', 'Pays with Mercado Pago'], d: ['Tarjeta, transferencia o billetera, y le llega su QR por mail.', 'Card, transfer or wallet, and the QR arrives by email.'] },
   { icon: QrCode, t: ['El local escanea en la puerta', 'The venue scans at the door'], d: ['Válida, usada o inválida en un segundo.', 'Valid, used or invalid in one second.'] },
   { icon: Star, t: ['Reseñas y métricas', 'Reviews and metrics'], d: ['Cada evento deja datos para el próximo.', 'Every event leaves data for the next one.'] },

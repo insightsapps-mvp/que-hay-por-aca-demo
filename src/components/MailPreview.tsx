@@ -7,7 +7,7 @@ import type { Evento, Ticket } from '@/types'
 import { CARGO_SERVICIO, localById, orgById } from '@/data/mock'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/misc'
-import { DevNotice, Logo } from '@/components/common'
+import { DevNotice, Logo, LogoMark } from '@/components/common'
 
 export const qrValue = (codigo: string) => `https://quehayporaca.app/t/${codigo}`
 
@@ -21,11 +21,9 @@ export function MailBody({ ticket, evento, comprador, email }: { ticket: Ticket;
   return (
     <div className="bg-[#f4f4f5] px-3 py-5 text-[#09090b] sm:px-6">
       <div className="mx-auto max-w-[560px] overflow-hidden rounded-[14px] bg-white shadow-sm">
-        <div className="flex items-center gap-2 bg-[#7c3aed] px-5 py-4 text-white">
+        <div className="flex items-center gap-2 bg-gradient-to-r from-[#ef6412] to-[#f59e0b] px-5 py-4 text-white">
           <span className="grid h-7 w-7 place-items-center rounded-[8px] bg-white/20">
-            <svg viewBox="0 0 32 32" className="h-4 w-4" fill="none">
-              <path d="M6 24V9l10 8.5L26 9v15" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <LogoMark className="h-[18px] w-[18px]" />
           </span>
           <span className="text-[15px] font-extrabold tracking-tight">{BRAND}</span>
         </div>
@@ -44,11 +42,11 @@ export function MailBody({ ticket, evento, comprador, email }: { ticket: Ticket;
           </div>
           <div className="mt-5 space-y-2.5 text-[14px]">
             <p className="text-[17px] font-bold">{evento.titulo[lang]}</p>
-            <p className="flex items-center gap-2 capitalize"><CalendarDays className="h-4 w-4 text-[#7c3aed]" />{fmtDateLong(evento.inicio, lang)}</p>
-            <p className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#7c3aed]" /><span className="font-mono">{fmtTime(evento.inicio, lang)}</span> {l('hs · abren puertas 30 min antes', 'h · doors open 30 min earlier')}</p>
-            <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#7c3aed]" />{loc.nombre} · {loc.direccion}, {loc.barrio}</p>
+            <p className="flex items-center gap-2 capitalize"><CalendarDays className="h-4 w-4 text-[#ef6412]" />{fmtDateLong(evento.inicio, lang)}</p>
+            <p className="flex items-center gap-2"><Clock className="h-4 w-4 text-[#ef6412]" /><span className="font-mono">{fmtTime(evento.inicio, lang)}</span> {l('hs · abren puertas 30 min antes', 'h · doors open 30 min earlier')}</p>
+            <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#ef6412]" />{loc.nombre} · {loc.direccion}, {loc.barrio}</p>
           </div>
-          <div className="mt-5 rounded-[12px] bg-[#faf5ff] p-4 text-[13px] leading-relaxed">
+          <div className="mt-5 rounded-[12px] bg-[#fff3ea] p-4 text-[13px] leading-relaxed">
             <p className="font-semibold">{l('Cómo ingresar', 'How to get in')}</p>
             <ol className="mt-1 list-decimal space-y-0.5 pl-4 text-[#52525b]">
               <li>{l('Subí el brillo del celular al máximo.', 'Turn your phone brightness all the way up.')}</li>

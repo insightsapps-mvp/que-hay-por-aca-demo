@@ -39,3 +39,10 @@
 
 ## Bloqueos
 - Ninguno
+
+## Cambios post-entrega (pedidos del cliente)
+- Sin enfoque "de noche": copy pasa a "hoy / a cualquier hora"; algunos eventos en horario de tarde
+- Paleta naranja (#ef6412) + azul de apoyo (#2563eb), fondo crema con brillos suaves; sin rosa. Logo nuevo (pin de ubicación)
+- Login centrado solamente (sin panel hero ni "CABA · Zona oeste")
+- Roles: Usuario naranja · Organizador turquesa · Local verde · Admin azul
+- Reseñas: acceso "Dejá tu reseña" desde entradas pasadas; nueva sección Admin → Reseñas (/admin/resenas) para mostrar u ocultar cada reseña (las ocultas no se ven en la app ni cuentan en el promedio); el organizador ve "Oculta por el admin"

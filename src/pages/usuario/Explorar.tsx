@@ -128,7 +128,7 @@ export default function Explorar() {
           <div className="flex items-start justify-between gap-2">
             <div>
               <p className="text-[22px] font-bold tracking-tight">{l('Hola, Martina 👋', 'Hi, Martina 👋')}</p>
-              <p className="text-[13px] text-muted">{l('¿Qué hacemos esta noche?', 'What are we doing tonight?')}</p>
+              <p className="text-[13px] text-muted">{l('¿Qué hacemos hoy?', 'What are we doing today?')}</p>
             </div>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -195,7 +195,7 @@ export default function Explorar() {
           </div>
 
           <div className="mt-5 flex items-baseline justify-between">
-            <h2 className="text-[16px] font-bold">{l('Esta noche cerca tuyo', 'Tonight near you')}</h2>
+            <h2 className="text-[16px] font-bold">{l('Hoy cerca tuyo', 'Today near you')}</h2>
             <button onClick={() => navigate('/app/mapa')} className="text-[12.5px] font-semibold text-accent">
               {l('Ver mapa', 'See map')} →
             </button>
@@ -208,7 +208,7 @@ export default function Explorar() {
             </div>
           ) : (
             <p className="mt-2 rounded-[10px] border border-dashed border-border p-4 text-center text-[13px] text-muted">
-              {l('No hay eventos esta noche con estos filtros.', 'No events tonight with these filters.')}
+              {l('No hay eventos hoy con estos filtros.', 'No events today with these filters.')}
             </p>
           )}
 
@@ -269,7 +269,7 @@ export default function Explorar() {
             scrollWheelZoom={false}
             doubleClickZoom={false}
           >
-            <Circle center={[USER_LOC.lat, USER_LOC.lng]} radius={radio * 1000} pathOptions={{ color: '#7c3aed', weight: 2, fillColor: '#7c3aed', fillOpacity: 0.1 }} />
+            <Circle center={[USER_LOC.lat, USER_LOC.lng]} radius={radio * 1000} pathOptions={{ color: '#ef6412', weight: 2, fillColor: '#ef6412', fillOpacity: 0.1 }} />
             <CircleMarker center={[USER_LOC.lat, USER_LOC.lng]} radius={6} pathOptions={{ color: '#fff', weight: 3, fillColor: '#2563eb', fillOpacity: 1 }} />
           </MapBase>
         </div>

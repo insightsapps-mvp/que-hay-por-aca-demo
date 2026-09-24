@@ -61,8 +61,8 @@ export function WelcomeModal() {
         </DialogDescription>
         <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
           {l(
-            'Que hay por acá junta en una sola app todo lo que pasa esta noche en CABA y zona oeste. Tus usuarios abren el mapa y ven los eventos de hoy cerca suyo, compran la entrada con Mercado Pago y reciben su QR por mail. En la puerta, el local lo escanea y listo: sin listas en papel, sin entradas truchas. Vos y los organizadores ven cada venta en tiempo real.',
-            'Que hay por acá brings everything happening tonight in CABA and the west zone into one app. Your users open the map and see today’s events near them, buy their ticket with Mercado Pago and get their QR by email. At the door, the venue scans it and that’s it: no paper lists, no fake tickets. You and the organizers see every sale in real time.'
+            'Que hay por acá junta en una sola app todo lo que pasa hoy en CABA y zona oeste, a cualquier hora. Tus usuarios abren el mapa y ven los eventos de hoy cerca suyo, compran la entrada con Mercado Pago y reciben su QR por mail. En la puerta, el local lo escanea y listo: sin listas en papel, sin entradas truchas. Vos y los organizadores ven cada venta en tiempo real.',
+            'Que hay por acá brings everything happening today in CABA and the west zone into one app, at any time of day. Your users open the map and see today’s events near them, buy their ticket with Mercado Pago and get their QR by email. At the door, the venue scans it and that’s it: no paper lists, no fake tickets. You and the organizers see every sale in real time.'
           )}
         </p>
         <p className="mt-3 text-[14.5px] italic text-muted">

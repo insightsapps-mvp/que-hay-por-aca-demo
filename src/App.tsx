@@ -24,6 +24,7 @@ import Aprobacion from '@/pages/admin/Aprobacion'
 import Transacciones from '@/pages/admin/Transacciones'
 import Usuarios from '@/pages/admin/Usuarios'
 import Categorias from '@/pages/admin/Categorias'
+import ModeracionResenas from '@/pages/admin/ModeracionResenas'
 import Notificaciones from '@/pages/admin/Notificaciones'
 import { Trailer } from '@/features/Trailer'
 
@@ -66,6 +67,7 @@ export default function App() {
             <Route path="/admin/aprobacion" element={<Aprobacion />} />
             <Route path="/admin/transacciones" element={<Transacciones />} />
             <Route path="/admin/usuarios" element={<Usuarios />} />
+            <Route path="/admin/resenas" element={<ModeracionResenas />} />
             <Route path="/admin/categorias" element={<Categorias />} />
             <Route path="/admin/notificaciones" element={<Notificaciones />} />
           </Route>

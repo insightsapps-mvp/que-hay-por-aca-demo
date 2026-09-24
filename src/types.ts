@@ -84,6 +84,7 @@ export interface Resena {
   texto: Bi
   fecha: Date
   respuesta?: Bi
+  oculta?: boolean
 }
 
 export interface Validacion {

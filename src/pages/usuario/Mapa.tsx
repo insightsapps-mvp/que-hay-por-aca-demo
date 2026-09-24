@@ -169,8 +169,8 @@ export default function Mapa() {
   return (
     <DevicePage
       bannerId="mapa"
-      title={l('Mapa de hoy', 'Tonight’s map')}
-      subtitle={l(`${hoy.length} eventos esta noche · ${live.length} ya arrancaron`, `${hoy.length} events tonight · ${live.length} already started`)}
+      title={l('Mapa de hoy', 'Today’s map')}
+      subtitle={l(`${hoy.length} eventos hoy · ${live.length} ya arrancaron`, `${hoy.length} events today · ${live.length} already started`)}
       bullets={[
         ['Se centra con el GPS real y muestra solo lo que pasa hoy.', 'Centers with real GPS and shows only what’s happening today.'],
         ['Los pines se actualizan en vivo cuando un evento arranca o se agota.', 'Pins update live when an event starts or sells out.'],
@@ -218,7 +218,7 @@ export default function Mapa() {
             <Circle
               center={[USER_LOC.lat, USER_LOC.lng]}
               radius={radio * 1000}
-              pathOptions={{ color: '#7c3aed', weight: 1.5, dashArray: '6 6', fillColor: '#7c3aed', fillOpacity: 0.05 }}
+              pathOptions={{ color: '#ef6412', weight: 1.5, dashArray: '6 6', fillColor: '#ef6412', fillOpacity: 0.05 }}
             />
             <Marker position={[USER_LOC.lat, USER_LOC.lng]} icon={meIcon} zIndexOffset={1000}>
               <Tooltip permanent direction="top" offset={[0, -12]} className="!rounded-full !border-0 !bg-blue-600 !px-2 !py-0.5 !text-[10.5px] !font-semibold !text-white !shadow">
@@ -341,7 +341,7 @@ export default function Mapa() {
             <span className="mx-auto block h-1 w-10 rounded-full bg-border" />
             <span className="mt-2 flex items-center justify-between">
               <span className="text-[15px] font-bold">
-                {l('Esta noche cerca tuyo', 'Tonight near you')} <span className="num text-muted">· {visibles.length}</span>
+                {l('Hoy cerca tuyo', 'Today near you')} <span className="num text-muted">· {visibles.length}</span>
               </span>
               <span className="inline-flex items-center gap-1 text-[11.5px] font-medium text-muted">
                 <Navigation className="h-3 w-3" />

@@ -122,24 +122,24 @@ export const orgById = (id: string) => ORGANIZADORES.find((o) => o.id === id)!
 /* ───────────── Fotos (gradientes) ───────────── */
 const GRADS: Record<Categoria, string[]> = {
   conciertos: [
-    'linear-gradient(135deg,#7c3aed 0%,#db2777 100%)',
-    'linear-gradient(135deg,#4c1d95 0%,#f472b6 100%)',
-    'linear-gradient(160deg,#1e1b4b 0%,#7c3aed 60%,#f0abfc 100%)',
-    'linear-gradient(120deg,#be185d 0%,#f59e0b 100%)',
-    'linear-gradient(135deg,#312e81 0%,#ec4899 100%)',
+    'linear-gradient(135deg,#ef6412 0%,#2563eb 100%)',
+    'linear-gradient(135deg,#1e3a8a 0%,#60a5fa 100%)',
+    'linear-gradient(160deg,#1e1b4b 0%,#ef6412 60%,#93c5fd 100%)',
+    'linear-gradient(120deg,#1e3a8a 0%,#f59e0b 100%)',
+    'linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%)',
   ],
   fiestas: [
-    'linear-gradient(135deg,#0f172a 0%,#7c3aed 55%,#22d3ee 100%)',
-    'linear-gradient(135deg,#9333ea 0%,#06b6d4 100%)',
-    'linear-gradient(150deg,#18181b 0%,#c026d3 70%,#fde047 100%)',
-    'linear-gradient(135deg,#4338ca 0%,#e879f9 100%)',
-    'linear-gradient(135deg,#1e293b 0%,#8b5cf6 100%)',
+    'linear-gradient(135deg,#0f172a 0%,#ef6412 55%,#22d3ee 100%)',
+    'linear-gradient(135deg,#2563eb 0%,#06b6d4 100%)',
+    'linear-gradient(150deg,#18181b 0%,#1d4ed8 70%,#fde047 100%)',
+    'linear-gradient(135deg,#1d4ed8 0%,#60a5fa 100%)',
+    'linear-gradient(135deg,#1e293b 0%,#3b82f6 100%)',
   ],
   experiencias: [
     'linear-gradient(135deg,#7f1d1d 0%,#f59e0b 100%)',
     'linear-gradient(135deg,#9a3412 0%,#fbbf24 100%)',
     'linear-gradient(150deg,#431407 0%,#ea580c 60%,#fde68a 100%)',
-    'linear-gradient(135deg,#831843 0%,#fb923c 100%)',
+    'linear-gradient(135deg,#1e3a8a 0%,#fb923c 100%)',
     'linear-gradient(135deg,#78350f 0%,#fcd34d 100%)',
   ],
   deportes: [
@@ -150,11 +150,11 @@ const GRADS: Record<Categoria, string[]> = {
     'linear-gradient(135deg,#1e3a8a 0%,#34d399 100%)',
   ],
   cultura: [
-    'linear-gradient(135deg,#1e3a8a 0%,#f472b6 100%)',
-    'linear-gradient(135deg,#0f766e 0%,#c084fc 100%)',
-    'linear-gradient(150deg,#172554 0%,#6366f1 60%,#fbcfe8 100%)',
-    'linear-gradient(135deg,#3730a3 0%,#fda4af 100%)',
-    'linear-gradient(135deg,#155e75 0%,#a78bfa 100%)',
+    'linear-gradient(135deg,#1e3a8a 0%,#60a5fa 100%)',
+    'linear-gradient(135deg,#0f766e 0%,#fdba74 100%)',
+    'linear-gradient(150deg,#172554 0%,#3b82f6 60%,#fed7aa 100%)',
+    'linear-gradient(135deg,#3730a3 0%,#fed7aa 100%)',
+    'linear-gradient(135deg,#155e75 0%,#93c5fd 100%)',
   ],
 }
 export function fotosDe(cat: Categoria, seed: number, n = 4) {
@@ -193,23 +193,23 @@ const EN_CURSO: [Seed, number, number][] = [
 
 // Hoy · próximos (9) con hora "ideal" nocturna
 const HOY_PROX: [Seed, number, number][] = [
-  [S('ev-14', 'After office en el rooftop', 'Rooftop after office', 'Tragos al atardecer, DJ set de house suave y la mejor vista de los diques de Puerto Madero.', 'Sunset drinks, a mellow house DJ set and the best view of the Puerto Madero docks.', 'fiestas', 'org-02', 'loc-05', 13000, 250, 164, 4.2, 37), 19, 30],
-  [S('ev-10', 'Recital acústico en Castelar', 'Acoustic show in Castelar', 'Cantautores de zona oeste en formato íntimo, en el jardín de una quinta centenaria.', 'West-zone singer-songwriters in an intimate format, in the garden of a century-old country house.', 'conciertos', 'org-04', 'loc-08', 11000, 300, 190, 4.6, 33), 21, 0],
-  [S('ev-04', 'Stand-up en San Telmo', 'Stand-up in San Telmo', 'Cuatro comediantes, un bodegón lleno y cero filtro. Show de 90 minutos con pizza libre.', 'Four comedians, a packed bodegón and zero filter. A 90-minute show with free-flowing pizza.', 'cultura', 'org-06', 'loc-06', 9500, 150, 118, 4.7, 64), 21, 30],
+  [S('ev-14', 'After office en el rooftop', 'Rooftop after office', 'Tragos al atardecer, DJ set de house suave y la mejor vista de los diques de Puerto Madero.', 'Sunset drinks, a mellow house DJ set and the best view of the Puerto Madero docks.', 'fiestas', 'org-02', 'loc-05', 13000, 250, 164, 4.2, 37), 18, 0],
+  [S('ev-10', 'Recital acústico en Castelar', 'Acoustic show in Castelar', 'Cantautores de zona oeste en formato íntimo, en el jardín de una quinta centenaria.', 'West-zone singer-songwriters in an intimate format, in the garden of a century-old country house.', 'conciertos', 'org-04', 'loc-08', 11000, 300, 190, 4.6, 33), 17, 30],
+  [S('ev-04', 'Stand-up en San Telmo', 'Stand-up in San Telmo', 'Cuatro comediantes, un bodegón lleno y cero filtro. Show de 90 minutos con pizza libre.', 'Four comedians, a packed bodegón and zero filter. A 90-minute show with free-flowing pizza.', 'cultura', 'org-06', 'loc-06', 9500, 150, 118, 4.7, 64), 20, 0],
   [S('ev-08', 'Noche de rock nacional en Morón', 'Argentine rock night in Morón', 'Tres bandas tributo repasan lo mejor del rock nacional: Redondos, Soda, Charly y Spinetta.', 'Three tribute bands go through the best of Argentine rock: Redondos, Soda, Charly and Spinetta.', 'conciertos', 'org-04', 'loc-07', 14000, 600, 410, 4.5, 71), 22, 0],
   [S('ev-13', 'Indie rock en el Abasto', 'Indie rock in Abasto', 'Tres bandas emergentes de la escena indie porteña en un solo escenario. Guitarras, sintes y mucha energía.', 'Three emerging bands from the Buenos Aires indie scene on one stage. Guitars, synths and lots of energy.', 'conciertos', 'org-02', 'loc-04', 16000, 450, 300, 4.4, 45), 22, 0],
-  [S('ev-11', 'Karaoke gigante en Ramos', 'Giant karaoke in Ramos', 'Pantalla de 8 metros, 20.000 canciones y un público que se sabe todas. Anotate y subí al escenario.', 'An 8-meter screen, 20,000 songs and a crowd that knows them all. Sign up and take the stage.', 'experiencias', 'org-04', 'loc-10', 8500, 500, 220, 4.1, 19), 22, 30],
+  [S('ev-11', 'Karaoke gigante en Ramos', 'Giant karaoke in Ramos', 'Pantalla de 8 metros, 20.000 canciones y un público que se sabe todas. Anotate y subí al escenario.', 'An 8-meter screen, 20,000 songs and a crowd that knows them all. Sign up and take the stage.', 'experiencias', 'org-04', 'loc-10', 8500, 500, 220, 4.1, 19), 19, 30],
   [S('ev-01', 'Techno en la Usina', 'Techno at the Usina', 'Line-up internacional, sonido Funktion-One y 6 horas de techno en la sala principal de la Usina. La fecha más esperada del mes.', 'International line-up, Funktion-One sound and 6 hours of techno in the Usina main room. The most anticipated date of the month.', 'fiestas', 'org-01', 'loc-03', 18000, 900, 864, 4.6, 128), 23, 0],
-  [S('ev-12', 'Milonga de medianoche', 'Midnight milonga', 'Clase abierta de tango para principiantes y después milonga con orquesta típica en vivo.', 'Open tango class for beginners followed by a milonga with a live orquesta típica.', 'cultura', 'org-05', 'loc-06', 9000, 150, 80, 4.8, 27), 23, 30],
-  [S('ev-07', 'Fiesta retro 2000s', 'Retro 2000s party', 'Lo mejor del pop, el reggaetón viejo y el rock de los 2000. Dress code: tu peor outfit de 2004.', 'The best pop, old-school reggaetón and 2000s rock. Dress code: your worst 2004 outfit.', 'fiestas', 'org-01', 'loc-02', 11000, 180, 150, 4.3, 88), 0, 30],
+  [S('ev-12', 'Milonga de medianoche', 'Midnight milonga', 'Clase abierta de tango para principiantes y después milonga con orquesta típica en vivo.', 'Open tango class for beginners followed by a milonga with a live orquesta típica.', 'cultura', 'org-05', 'loc-06', 9000, 150, 80, 4.8, 27), 21, 30],
+  [S('ev-07', 'Fiesta retro 2000s', 'Retro 2000s party', 'Lo mejor del pop, el reggaetón viejo y el rock de los 2000. Dress code: tu peor outfit de 2004.', 'The best pop, old-school reggaetón and 2000s rock. Dress code: your worst 2004 outfit.', 'fiestas', 'org-01', 'loc-02', 11000, 180, 150, 4.3, 88), 23, 30],
 ]
 
 // Esta semana (12)
 const SEMANA: [Seed, number, number, number][] = [
   [S('ev-15', 'Electrónica al atardecer', 'Sunset electronica', 'Melodic house y progressive mientras el sol se esconde detrás de los diques.', 'Melodic house and progressive while the sun sets behind the docks.', 'fiestas', 'org-02', 'loc-05', 22000, 250, 120, 4.6, 54), 1, 19, 0],
-  [S('ev-19', 'Taller de coctelería', 'Cocktail workshop', 'Aprendé a preparar 4 clásicos con un bartender premiado. Incluye todos los insumos y degustación.', 'Learn to make 4 classics with an award-winning bartender. All ingredients and tasting included.', 'experiencias', 'org-05', 'loc-02', 25000, 40, 31, 4.9, 29), 1, 20, 0],
+  [S('ev-19', 'Taller de coctelería', 'Cocktail workshop', 'Aprendé a preparar 4 clásicos con un bartender premiado. Incluye todos los insumos y degustación.', 'Learn to make 4 classics with an award-winning bartender. All ingredients and tasting included.', 'experiencias', 'org-05', 'loc-02', 25000, 40, 31, 4.9, 29), 1, 16, 0],
   [S('ev-16', 'Orquesta de cámara en el Galpón', 'Chamber orchestra at the Galpón', 'Vivaldi, Piazzolla y bandas sonoras de cine interpretadas por una orquesta de 20 músicos.', 'Vivaldi, Piazzolla and film scores performed by a 20-piece orchestra.', 'cultura', 'org-03', 'loc-04', 12000, 450, 205, 4.7, 36), 2, 20, 30],
-  [S('ev-17', 'Fútbol 5 nocturno: copa relámpago', 'Night 5-a-side: lightning cup', 'Armá tu equipo y competí en una copa de una sola noche. Árbitros, tercer tiempo y trofeo.', 'Build your team and compete in a one-night cup. Referees, post-match drinks and a trophy.', 'deportes', 'org-04', 'loc-09', 8000, 160, 96, 4.2, 18), 2, 21, 0],
+  [S('ev-17', 'Fútbol 5 nocturno: copa relámpago', 'Night 5-a-side: lightning cup', 'Armá tu equipo y competí en una copa de una sola noche. Árbitros, tercer tiempo y trofeo.', 'Build your team and compete in a one-night cup. Referees, post-match drinks and a trophy.', 'deportes', 'org-04', 'loc-09', 8000, 160, 96, 4.2, 18), 2, 18, 30],
   [S('ev-21', 'Cine bajo las estrellas', 'Cinema under the stars', 'Clásicos del cine argentino proyectados en el parque de la quinta. Traé tu reposera.', 'Argentine film classics projected in the country house park. Bring your deck chair.', 'cultura', 'org-04', 'loc-08', 8000, 300, 140, 4.5, 24), 2, 21, 0],
   [S('ev-18', 'Festival de cumbia en Morón', 'Cumbia festival in Morón', 'Cinco bandas de cumbia en vivo, patio de comidas y la previa más grande de zona oeste.', 'Five live cumbia bands, a food court and the biggest pre-party in the west zone.', 'conciertos', 'org-04', 'loc-07', 15000, 600, 380, 4.4, 62), 3, 22, 0],
   [S('ev-23', 'Cena a ciegas en el rooftop', 'Dinner in the dark', 'Menú de pasos servido con los ojos vendados. Una experiencia sensorial con maridaje incluido.', 'A tasting menu served blindfolded. A sensory experience with wine pairing included.', 'experiencias', 'org-05', 'loc-05', 45000, 40, 34, 4.8, 21), 3, 21, 0],
@@ -454,6 +454,16 @@ resArr.push({
   estrellas: 2,
   texto: TXT[2][0],
   fecha: hoyMas(-3, 11, 20),
+})
+// Edge: reseña tipo spam que el admin ya ocultó
+resArr.push({
+  id: 'rs-46',
+  eventoId: 'ev-01',
+  usuarioId: 'usr-47',
+  estrellas: 1,
+  texto: { es: 'Entradas más baratas por mi Instagram, escribime 👉 @reventa_ya', en: 'Cheaper tickets on my Instagram, DM me 👉 @reventa_ya' },
+  fecha: hoyMas(-1, 18, 40),
+  oculta: true,
 })
 export const RESENAS_INICIALES = resArr.sort((a, b) => b.fecha.getTime() - a.fecha.getTime())
 

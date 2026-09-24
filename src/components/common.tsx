@@ -300,13 +300,27 @@ export function PoweredBy({ className }: { className?: string }) {
   )
 }
 
+/** Pin de ubicación con destello: "qué hay por acá" */
+export function LogoMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" className={className} fill="none">
+      <path
+        d="M15 5.5c-5 0-8.8 3.8-8.8 8.6 0 6.2 8.8 13.4 8.8 13.4s8.8-7.2 8.8-13.4c0-4.8-3.8-8.6-8.8-8.6Z"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <circle cx="15" cy="14" r="3" fill="currentColor" />
+      <path d="M26 3.5v5M23.5 6h5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 export function Logo({ className, size = 'h-7 w-7' }: { className?: string; size?: string }) {
   return (
     <span className={cn('inline-flex items-center gap-2', className)}>
-      <span className={cn('grid place-items-center rounded-[8px] bg-accent text-white shadow-sm', size)}>
-        <svg viewBox="0 0 32 32" className="h-[62%] w-[62%]" fill="none">
-          <path d="M6 24V9l10 8.5L26 9v15" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      <span className={cn('grid place-items-center rounded-[9px] bg-gradient-to-br from-accent to-[#f59e0b] text-white shadow-md shadow-orange-500/25', size)}>
+        <LogoMark className="h-[66%] w-[66%]" />
       </span>
     </span>
   )

@@ -197,7 +197,7 @@ export default function NuevoEvento() {
                     <span
                       className={cn(
                         'grid h-6 w-6 place-items-center rounded-full text-[10px] font-bold',
-                        i < pasoIdx ? 'bg-success text-white' : i === pasoIdx ? 'bg-[#db2777] text-white ring-4 ring-pink-200 dark:ring-pink-500/20' : 'bg-surface-2 text-muted'
+                        i < pasoIdx ? 'bg-success text-white' : i === pasoIdx ? 'bg-[#0891b2] text-white ring-4 ring-cyan-200 dark:ring-cyan-500/20' : 'bg-surface-2 text-muted'
                       )}
                     >
                       {i < pasoIdx ? <Check className="h-3 w-3" /> : i + 1}

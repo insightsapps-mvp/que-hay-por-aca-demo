@@ -100,7 +100,7 @@ export default function Escaner() {
           <div className="card p-4 text-[13px] text-muted">
             <p className="font-semibold text-text">{l('Probá con un código real', 'Try a real code')}</p>
             <p className="mt-1">
-              {l('La entrada de Martina para esta noche es', 'Martina’s ticket for tonight is')} <span className="num text-text">QHA7K2Q9XA</span>.{' '}
+              {l('La entrada de Martina para hoy es', 'Martina’s ticket for today is')} <span className="num text-text">QHA7K2Q9XA</span>.{' '}
               {l('Ingresala a mano: la primera vez da válida, la segunda “ya ingresó”.', 'Type it in: the first time it’s valid, the second “already in”.')}
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function Escaner() {
           <div className="relative mx-auto mt-4 aspect-square w-full max-w-[280px] overflow-hidden rounded-[22px] bg-[radial-gradient(circle_at_50%_40%,#27272a,#09090b_70%)]">
             <div className="absolute inset-8">
               <Corners />
-              <div className="absolute inset-x-2 h-0.5 animate-laser rounded-full bg-accent shadow-[0_0_14px_4px_rgba(124,58,237,.7)]" />
+              <div className="absolute inset-x-2 h-0.5 animate-laser rounded-full bg-accent shadow-[0_0_14px_4px_rgba(239,100,18,.7)]" />
             </div>
             <div className="absolute inset-x-0 bottom-3 text-center text-[11.5px] text-white/60">
               {scanning ? l('Leyendo código…', 'Reading code…') : l('Apuntá al QR de la entrada', 'Point at the ticket QR')}

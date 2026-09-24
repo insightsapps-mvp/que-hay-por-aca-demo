@@ -37,7 +37,7 @@ export function WebPage({
 export function useChartColors() {
   const dark = useSettings((s) => s.theme) === 'dark'
   return {
-    accent: dark ? '#8b5cf6' : '#7c3aed',
+    accent: dark ? '#ff7a2e' : '#ef6412',
     grid: dark ? 'rgba(255,255,255,.08)' : '#e4e4e7',
     muted: dark ? '#a1a1aa' : '#71717a',
     success: '#16a34a',

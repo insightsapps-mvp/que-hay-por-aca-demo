@@ -52,7 +52,7 @@ export default function Aprobacion() {
     setAprobados(aprobadosSesion)
     toast.success(tl('Evento aprobado y publicado', 'Event approved and published'), {
       description: esHoy(ev)
-        ? tl(`${ev.titulo.es} ya aparece en Explorar y en el Mapa de hoy.`, `${ev.titulo.en} now shows in Explore and on Tonight’s map.`)
+        ? tl(`${ev.titulo.es} ya aparece en Explorar y en el Mapa de hoy.`, `${ev.titulo.en} now shows in Explore and on Today’s map.`)
         : tl(`${ev.titulo.es} ya aparece en Explorar.`, `${ev.titulo.en} now shows in Explore.`),
     })
   }

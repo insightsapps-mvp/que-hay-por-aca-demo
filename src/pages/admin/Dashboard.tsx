@@ -191,7 +191,7 @@ export default function Dashboard() {
                     <span className="num text-[12.5px]">{compactARS(v, lang)}</span>
                   </div>
                   <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-border">
-                    <div className="h-full rounded-full bg-[#4f46e5]" style={{ width: `${(v / max) * 100}%` }} />
+                    <div className="h-full rounded-full bg-[#1d4ed8]" style={{ width: `${(v / max) * 100}%` }} />
                   </div>
                 </div>
               )
@@ -211,7 +211,7 @@ export default function Dashboard() {
               <CircleMarker center={[-34.605, -58.41]} radius={10 + caba * 1.3} pathOptions={{ color: c.accent, weight: 2, fillColor: c.accent, fillOpacity: 0.25 }}>
                 <LTooltip permanent direction="center" className="!border-0 !bg-transparent !shadow-none !font-mono !text-[13px] !font-bold">{caba}</LTooltip>
               </CircleMarker>
-              <CircleMarker center={[-34.648, -58.605]} radius={10 + oeste * 1.3} pathOptions={{ color: '#4f46e5', weight: 2, fillColor: '#4f46e5', fillOpacity: 0.25 }}>
+              <CircleMarker center={[-34.648, -58.605]} radius={10 + oeste * 1.3} pathOptions={{ color: '#1d4ed8', weight: 2, fillColor: '#1d4ed8', fillOpacity: 0.25 }}>
                 <LTooltip permanent direction="center" className="!border-0 !bg-transparent !shadow-none !font-mono !text-[13px] !font-bold">{oeste}</LTooltip>
               </CircleMarker>
             </MapBase>

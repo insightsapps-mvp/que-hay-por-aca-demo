@@ -22,7 +22,7 @@ interface SettingsState {
 function applyTheme(t: Theme) {
   const d = document.documentElement
   d.classList.toggle('dark', t === 'dark')
-  d.style.background = t === 'dark' ? '#09090b' : '#ffffff'
+  d.style.background = t === 'dark' ? '#140d0a' : '#fff7f0'
 }
 
 export const useSettings = create<SettingsState>((set, get) => ({
@@ -64,7 +64,7 @@ const dict = {
   'nav.local': ['Local', 'Venue'],
   'nav.admin': ['Admin', 'Admin'],
   'nav.explorar': ['Explorar', 'Explore'],
-  'nav.mapa': ['Mapa de hoy', "Tonight's map"],
+  'nav.mapa': ['Mapa de hoy', "Today's map"],
   'nav.entradas': ['Mis entradas', 'My tickets'],
   'nav.eventos': ['Mis eventos', 'My events'],
   'nav.nuevo': ['Cargar evento', 'Create event'],
@@ -77,6 +77,7 @@ const dict = {
   'nav.transacciones': ['Transacciones', 'Transactions'],
   'nav.usuarios': ['Usuarios y roles', 'Users & roles'],
   'nav.categorias': ['Categorías', 'Categories'],
+  'nav.moderacion': ['Reseñas', 'Reviews'],
   'nav.notificaciones': ['Notificaciones por mail', 'Email notifications'],
   'nav.evento': ['Detalle del evento', 'Event detail'],
   'nav.checkout': ['Checkout', 'Checkout'],

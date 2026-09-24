@@ -30,7 +30,7 @@ export default function Resenas() {
     .filter((r) => fEv === 'todos' || r.eventoId === fEv)
     .filter((r) => fStar === 'todas' || (fStar === 'sin' ? !r.respuesta : r.estrellas === Number(fStar)))
     .sort((a, b) => {
-      const urg = (x: typeof a) => (!x.respuesta && x.estrellas <= 2 ? 1 : 0)
+      const urg = (x: typeof a) => (!x.respuesta && !x.oculta && x.estrellas <= 2 ? 1 : 0)
       return urg(b) - urg(a) || b.fecha.getTime() - a.fecha.getTime()
     })
   const prom = mias.length ? mias.reduce((a, r) => a + r.estrellas, 0) / mias.length : 0
@@ -114,11 +114,11 @@ export default function Resenas() {
           <div className="space-y-3">
             {lista.map((r) => {
               const ev = eventos.find((e) => e.id === r.eventoId)!
-              const urgente = !r.respuesta && r.estrellas <= 2
+              const urgente = !r.respuesta && !r.oculta && r.estrellas <= 2
               return (
                 <div key={r.id} className={cn('card p-4', urgente && 'border-2 border-amber-400 bg-amber-50/40 dark:bg-amber-500/5')}>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="grid h-8 w-8 place-items-center rounded-full bg-[#7c3aed] text-[11px] font-bold text-white">
+                    <span className="grid h-8 w-8 place-items-center rounded-full bg-[#ef6412] text-[11px] font-bold text-white">
                       {usuarioNombre(r.usuarioId).split(' ').map((w) => w[0]).join('').slice(0, 2)}
                     </span>
                     <div className="min-w-0">
@@ -126,18 +126,19 @@ export default function Resenas() {
                       <p className="text-xs text-muted">{ev.titulo[lang]} · {fmtAgo(r.fecha, lang)}</p>
                     </div>
                     <div className="ml-auto flex items-center gap-2">
-                      {!r.respuesta && <Badge variant={urgente ? 'amber' : 'zinc'}>{l('Sin responder', 'Unanswered')}</Badge>}
+                      {r.oculta && <Badge variant="zinc">{l('Oculta por el admin', 'Hidden by admin')}</Badge>}
+                      {!r.respuesta && !r.oculta && <Badge variant={urgente ? 'amber' : 'zinc'}>{l('Sin responder', 'Unanswered')}</Badge>}
                       <Stars value={r.estrellas} />
                     </div>
                   </div>
                   <p className="mt-2 text-sm">{r.texto[lang]}</p>
                   {r.respuesta && (
-                    <div className="mt-3 rounded-[10px] border-l-2 border-[#db2777] bg-surface-2 p-3 text-sm">
-                      <p className="text-xs font-semibold text-[#db2777]">{l('Tu respuesta', 'Your reply')}</p>
+                    <div className="mt-3 rounded-[10px] border-l-2 border-[#0891b2] bg-surface-2 p-3 text-sm">
+                      <p className="text-xs font-semibold text-[#0891b2]">{l('Tu respuesta', 'Your reply')}</p>
                       <p className="mt-0.5 text-muted">{r.respuesta[lang]}</p>
                     </div>
                   )}
-                  {!r.respuesta &&
+                  {!r.respuesta && !r.oculta &&
                     (abierta === r.id ? (
                       <div className="mt-3">
                         <Textarea autoFocus maxLength={300} value={texto} onChange={(e) => setTexto(e.target.value)} placeholder={l('Escribí tu respuesta…', 'Write your reply…')} />

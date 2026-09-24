@@ -15,6 +15,7 @@
 - Bloque 12: Tour manual (solo botón ✨ Tour) con máscara SVG, dot azul, modal final
 - Bloque 13: Modo Trailer — 12 escenas en loop, cursor virtual, captions, salida X/Esc
 - Bloque 14: QA final
+- Bloque 15: repo público https://github.com/doncelromi/que-hay-por-aca-demo (developers-insights es cuenta de usuario; se creó en la cuenta logueada)
   - Regla A: desvío 0 px (welcome, tooltip sin target, modal final) en 1440×900, 1920×854 y 375×812
   - §7.8: login → /propuesta, "Ver en el demo" cambia de rol y vuelve centrado y resaltado, F5 = inversión oculta
   - 375 px: sin scroll horizontal en las 19 rutas (se agregó `grid-cols-1` base a los grids)
@@ -23,7 +24,7 @@
   - `npm run build` limpio (sin warnings) y links profundos servidos desde `dist/` con fallback SPA (vite preview)
 
 ## Pendiente
-- Bloque 15: repo en GitHub (ver Bloqueos)
+
 - Screenshots en /screenshots: Playwright no está instalado y el panel de preview no pinta sin foco
 
 ## Decisiones
@@ -37,4 +38,4 @@
 - Entrada de modales con opacity + scale solamente (centro fijo durante la animación)
 
 ## Bloqueos
-- `developers-insights` es una cuenta de usuario (no org) y `gh` está logueado como `doncelromi`: no se puede crear el repo ahí sin loguearse con esa cuenta
+- Ninguno
